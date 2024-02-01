@@ -1,0 +1,498 @@
+Handle: mCODE
+Nodes:
+    cancer-related_medication_administration_profile:
+        Desc: An episode of medication administration for a patient whose condition
+            is related to a primary or secondary cancer condition. In the context
+            of chemotherapy drugs, the medication administration in most cases is
+            performed and documented by the provider.
+        Props:
+        - effective
+        - medication
+        - reason_code
+        - reason_reference
+        - status
+        - status_reason
+        - subject
+        - treatment_intent
+    cancer-related_medication_request_profile:
+        Desc: A record of a medication prescription or consumption associated with
+            cancer treatment. The medication may reported by the prescriber, prescribing
+            organization, or patient. It does not have to be directly observed.
+        Props:
+        - authored_on
+        - category_>_us-core
+        - dosage_instruction
+        - dosage_instruction_>_text
+        - encounter
+        - intent
+        - medication
+        - reason_code
+        - reason_reference
+        - reported
+        - requester
+        - status
+        - status_reason
+        - subject
+        - treatment_intent
+    cancer-related_surgical_procedure_profile:
+        Desc: A surgical action addressing a cancer condition. The scope of this profile
+            has been narrowed to cancer-related procedures by constraining the reasonReference
+            and reasonCode to cancer conditions, one of which is required.
+        Props:
+        - body_site
+        - body_site_>_laterality_qualifier
+        - body_site_>_location_qualifier
+        - code
+        - performed
+        - reason_code
+        - reason_reference
+        - status
+        - subject
+        - treatment_intent
+    cancer_disease_status_profile:
+        Desc: A clinician's qualitative judgment on the current trend of the cancer,
+            e.g., whether it is stable, worsening (progressing), or improving (responding).
+            The judgment may be based a single type or multiple kinds of evidence,
+            such as imaging data, assessment of symptoms, tumor markers, laboratory
+            data, etc.
+        Props:
+        - effective
+        - evidence_type
+        - focus
+        - status
+        - subject
+        - value
+    cancer_patient_profile:
+        Desc: A patient who has been diagnosed with or is receiving medical treatment
+            for a malignant growth or tumor. The only difference between CancerPatient
+            and [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)
+            is that Patient.deceased is a [must-support](https://www.hl7.org/fhir/profiling.html#mustsupport)
+            element in mCODE. Must-support is an instruction to implementers of FHIR
+            clients and servers, rather than a constraint on data structure. Any Patient
+            resource complying with US Core Patient Profile will also comply with
+            CancerPatient.
+        Props:
+        - address
+        - address_>_city
+        - address_>_line
+        - address_>_period
+        - address_>_postal_code
+        - address_>_state
+        - birth_date
+        - birthsex
+        - communication_>_language
+        - deceased
+        - gender
+        - identifier
+        - identifier_>_system
+        - identifier_>_value
+        - name
+        - name_>_family
+        - name_>_given
+        - telecom_>_system
+        - telecom_>_use
+        - telecom_>_value
+    cancer_stage_profile:
+        Desc: 'Parent profile for observations regarding cancer stage, grade, classification,
+            or risk group. The stage is an assessment of the extent of the cancer
+            in the body, according to a given cancer staging classification system.
+            Profiles for different staging systems (e.g., TNM stage group, Rai stage,
+            FIGO stage, etc.) must derive from this profile.
+
+
+            Despite its name, the CancerStage profile can also be used as a parent
+            for cancer grade, classification, and risk grouping. This is because the
+            structure of the profiles are the same or very similar. The key elements
+            are the code, method, value, and optionally, prognostic factors referenced
+            in the hasMember element.'
+        Props: []
+    cll_binet_stage_profile:
+        Desc: Binet stage for chronic lymphocytic leukemia (CLL)
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    cll_rai_stage_profile:
+        Desc: Rai stage for chronic lymphocytic leukemia (CLL)
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    comorbidities_profile:
+        Desc: 'General structure for capturing comorbid conditions with respect to
+            a primary (''index'') condition. The user can use this profile in three
+            ways: (1) free-form, listing any conditions they wish to highlight as
+            significant comorbidities, (2) following a formal paradigm such as the
+            Charlson Comorbidity Index or the NCI Comorbidity Index, or (3) use disease
+            categories defined for registry reporting purposes, such as those defined
+            by Center for International Blood and Marrow Transplant Research (CIBMTR).'
+        Props:
+        - comorbid_condition_absent
+        - comorbid_condition_present
+        - effective
+        - focus
+        - status
+        - subject
+    ecog_performance_status_profile:
+        Desc: 'The Eastern Cooperative Oncology Group (ECOG) Performance Status represents
+            the patient''s functional status and is used to determine their ability
+            to tolerate therapies in serious illness, specifically for chemotherapy.
+            (Definition from: [LOINC](https://loinc.org/89262-0/))'
+        Props:
+        - data_absent_reason
+        - effective
+        - interpretation
+        - status
+        - subject
+        - value
+    genomic_region_studied_profile:
+        Desc: A subset of genes or genomic regions of interest in a targeted resequencing
+            study.
+        Props:
+        - category
+        - component
+        - component_>_genomic-ref-seq
+        - component_>_ranges-examined
+        - component_>_region-description
+        - component_>_value
+        - data_absent_reason
+        - effective_>_effective_date_time
+        - status
+        - subject
+    genomic_variant_profile:
+        Desc: Details about a set of changes in the tested sample compared to a reference
+            sequence. The term variant can be used to describe an alteration that
+            may be benign, pathogenic, or of unknown significance. The term variant
+            is increasingly being used in place of the term mutation. Variants can
+            be computed relative to reference sequence assembly from which it was
+            identified.
+        Props:
+        - category
+        - component
+        - component_>_copy-number
+        - component_>_cytogenetic-location
+        - component_>_cytogenomic-nomenclature
+        - component_>_sample-allelic-frequency
+        - component_>_value
+        - component_>_variation-code
+        - data_absent_reason
+        - effective_>_effective_date_time
+        - method
+        - specimen
+        - status
+        - subject
+        - value
+    genomics_report_profile:
+        Desc: Genomic analysis summary report. The report may include one or more
+            tests, with two distinct test types. The first type is a targeted mutation
+            test, where a specific mutation on a specific gene is tested for. The
+            result is either positive or negative for that mutation. The second type
+            is a more general test for variants. This type of test returns the identity
+            of variants found in a certain region of the genome.
+        Props:
+        - category
+        - code
+        - effective
+        - issued
+        - performer
+        - result
+        - result_>_region-studied
+        - result_>_variant
+        - specimen
+        - status
+        - subject
+    gynecologic_tumor_figo_stage_profile:
+        Desc: Gynecologic tumor stage by International Federation of Gynecology and
+            Obstetrics (FIGO) Staging System
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    history_of_metastatic_cancer:
+        Desc: Records the existence of a past episode of metastatic cancer, for the
+            purpose of long term management and tracking.
+        Props:
+        - value
+    human_specimen_profile:
+        Desc: A specimen taken from a Patient for the purpose of oncology-related
+            testing. The profile includes extensions to specify a more precise body
+            site and an identifier of source body structure at that site (for example,
+            a tumor identifier).
+        Props:
+        - collection
+        - collection_>_body_site
+        - collection_>_body_site_>_laterality_qualifier
+        - collection_>_body_site_>_location_qualifier
+        - identifier
+        - identifier_>_body_structure_identifier
+        - identifier_>_body_structure_identifier_>_value
+        - status
+        - subject
+        - type
+    karnofsky_performance_status_profile:
+        Desc: The Karnofsky Performance Status (KPS) is a tool used to measure a patient's
+            functional status. It can be used to compare the effectiveness of different
+            therapies and to help assess the prognosis of certain patients, such as
+            those with certain cancers. The KPS score ranges from 0 to 100 in intervals
+            of 10. Higher scores are associated with better functional status, with
+            100 representing no symptoms or evidence of disease, and 0 representing
+            death.
+        Props:
+        - data_absent_reason
+        - effective
+        - interpretation
+        - status
+        - subject
+        - value
+    lymphoma_stage_profile:
+        Desc: Staging of lymphoma (both Hodgkins and Non-Hodgkins) by Ann Arbor, Cotswold,
+            or Lugano staging systems. The method (required) indicates which of these
+            related staging systems was used.
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    m_code_patient_bundle_profile:
+        Desc: A collection of data for an mCODE cancer patient.
+        Props:
+        - entry
+        - entry_>_cancer_patient
+        - entry_>_cancer_patient_>_resource
+        - entry_>_mcode_body_structures
+        - entry_>_mcode_conditions
+        - entry_>_mcode_diagnostic_reports
+        - entry_>_mcode_medication_administrations
+        - entry_>_mcode_medication_requests
+        - entry_>_mcode_observations
+        - entry_>_mcode_procedures
+        - entry_>_mcode_specimens
+        - entry_>_resource
+        - timestamp
+    m_code_patient_group_profile:
+        Desc: A group of patients included in the scope of mCODE, whose cancer-related
+            resources conform to mCODE profiles.
+        Props: []
+    melanoma_breslow_depth_stage_profile:
+        Desc: Breslow depth stage for melanoma of the skin
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    melanoma_clark_level_profile:
+        Desc: Clark level for melanoma
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    myeloma_iss_stage_profile:
+        Desc: Myeloma Stage by International Staging System (ISS)
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    myeloma_riss_stage_profile:
+        Desc: Myeloma Stage by Revised International Staging System (RISS)
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    parent_for_t,_n,_and_m_categories:
+        Desc: Parent profile for T, N, and M category profiles.
+        Props: []
+    primary_cancer_condition_profile:
+        Desc: 'Records the the primary cancer condition, the original or first neoplasm
+            in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)).
+            Cancers that are not clearly secondary (i.e., of uncertain origin or behavior)
+            should be documented as primary.'
+        Props:
+        - abatement
+        - asserted_date
+        - body_site
+        - body_site_>_laterality_qualifier
+        - body_site_>_location_qualifier
+        - category_>_us-core
+        - clinical_status
+        - code
+        - histology_morphology_behavior
+        - onset
+        - recorded_date
+        - stage
+        - stage_>_assessment
+        - subject
+        - verification_status
+    prostate_gleason_grade_group_profile:
+        Desc: Gleason Grade Group for prostatic cancer
+        Props:
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    radiotherapy_course_summary_profile:
+        Desc: A summary of a course of radiotherapy delivered to a patient. It records
+            the treatment intent, termination reason, modalities, techniques, number
+            of sessions, and doses delivered to one or more body volumes. Whether
+            the course has been fully delivered or stopped is indicated in the status
+            element.
+        Props:
+        - actual_number_of_sessions
+        - body_site
+        - dose_delivered_to_volume
+        - dose_delivered_to_volume_>_fractions_delivered
+        - dose_delivered_to_volume_>_total_dose_delivered
+        - dose_delivered_to_volume_>_volume
+        - modality_and_technique
+        - modality_and_technique_>_modality
+        - modality_and_technique_>_technique
+        - performed
+        - reason_code
+        - reason_reference
+        - status
+        - subject
+        - termination_reason
+        - treatment_intent
+    radiotherapy_volume_profile:
+        Desc: A volume of the body used in radiotherapy planning or treatment delivery.
+        Props:
+        - description
+        - identifier
+        - identifier_>_display_name
+        - identifier_>_display_name_>_value
+        - location
+        - location_qualifier
+        - morphology
+        - patient
+    secondary_cancer_condition_profile:
+        Desc: 'Records the history of secondary neoplasms, including location(s) and
+            the date of onset of metastases. A secondary cancer results from the spread
+            (metastasization) of cancer from its original site (Definition from: NCI
+            Dictionary of Cancer Terms).'
+        Props:
+        - abatement
+        - body_site
+        - body_site_>_laterality_qualifier
+        - body_site_>_location_qualifier
+        - category_>_us-core
+        - clinical_status
+        - code
+        - extension
+        - extension_>_asserted_date
+        - extension_>_histology_morphology_behavior
+        - extension_>_related_primary_cancer_condition
+        - onset
+        - recorded_date
+        - subject
+        - verification_status
+    tnm_distant_metastases_category_profile:
+        Desc: Category describing the extent of a tumor metastasis in remote anatomical
+            locations, based on evidence such as physical examination, imaging, and/or
+            biopsy.
+        Props:
+        - code
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    tnm_primary_tumor_category_profile:
+        Desc: Category of the primary tumor, based on its size and extent, based on
+            evidence such as physical examination, imaging, and/or biopsy.
+        Props:
+        - code
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    tnm_regional_nodes_category_profile:
+        Desc: Category of the presence or absence of metastases in regional lymph
+            nodes, based on evidence such as physical examination, imaging, and/or
+            biopsy.
+        Props:
+        - code
+        - effective
+        - focus
+        - method
+        - status
+        - subject
+        - value
+    tnm_stage_group_profile:
+        Desc: Reporting of the stage group representing the overall extent of a cancer,
+            based on AJCC staging guidelines.
+        Props:
+        - code
+        - effective
+        - focus
+        - has_member_>_tnmcategory
+        - method
+        - status
+        - subject
+        - value
+    tumor_marker_test_profile:
+        Desc: The result of a tumor marker test. Tumor marker tests are generally
+            used to guide cancer treatment decisions and monitor treatment, as well
+            as to predict the chance of recovery and cancer recurrence.
+        Props:
+        - code
+        - data_absent_reason
+        - effective
+        - related_condition
+        - specimen
+        - status
+        - subject
+        - value
+    tumor_profile:
+        Desc: Identifies a tumor that has not been removed from the body. Whenever
+            possible, a single resource conforming to this profile will be used to
+            track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure
+            resources each time that tumor is measured). Use HumanSpecimen to represent
+            the tumor after removal from the body.
+        Props:
+        - extension
+        - extension_>_related_condition
+        - extension_>_related_condition_>_value
+        - identifier
+        - location
+        - location_qualifier
+        - patient
+    tumor_size_profile:
+        Desc: Records the dimensions of a tumor
+        Props:
+        - component
+        - component_>_tumor_longest_dimension
+        - component_>_tumor_longest_dimension_>_value
+        - component_>_tumor_other_dimension
+        - component_>_tumor_other_dimension_>_value
+        - effective
+        - focus
+        - method
+        - specimen
+        - subject
+Relationships: {}

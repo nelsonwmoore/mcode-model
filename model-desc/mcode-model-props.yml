@@ -1,0 +1,2310 @@
+PropDefinitions:
+    abatement:
+        Desc: The date or estimated date that the condition resolved or went into
+            remission. This is called "abatement" because of the many overloaded connotations
+            associated with "remission" or "resolution" - Conditions are never really
+            resolved, but they can abate.
+        Type: TBD
+    actual_number_of_sessions:
+        Desc: The number of sessions in a course of radiotherapy.
+        Type: TBD
+    address:
+        Desc: An address for the individual.
+        Type: TBD
+    address_>_city:
+        Desc: The name of the city, town, suburb, village or other community or delivery
+            center.
+        Type: string
+    address_>_line:
+        Desc: This component contains the house number, apartment number, street name,
+            street direction,  P.O. Box number, delivery hints, and similar address
+            information.
+        Type: string
+    address_>_period:
+        Desc: Time period when address was/is in use.
+        Type: TBD
+    address_>_postal_code:
+        Desc: A postal code designating a region defined by the postal service.
+        Type: string
+    address_>_state:
+        Desc: Sub-unit of a country with limited sovereignty in a federally organized
+            country. A code may be used if codes are in common use (e.g. US 2 letter
+            state codes).
+        Type: string
+    asserted_date:
+        Desc: The date on which the existence of the Condition was first asserted
+            or acknowledged.
+        Type: datetime
+    authored_on:
+        Desc: The date (and perhaps time) when the prescription was initially written
+            or authored on.
+        Type: datetime
+    birth_date:
+        Desc: The date of birth for the individual.
+        Type: TBD
+    birthsex:
+        Desc: A code classifying the person's sex assigned at birth  as specified
+            by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).
+        Type: TBD
+    body_site:
+        Desc: Detailed and structured anatomical location information. Multiple locations
+            are allowed - e.g. multiple punch biopsies of a lesion.
+        Type: TBD
+    body_site_>_laterality_qualifier:
+        Desc: Laterality qualifier for this bodySite
+        Enum:
+        - left_(qualifier_value)
+        - midline_(qualifier_value)
+        - right_(qualifier_value)
+        - right_and_left_(qualifier_value)
+    body_site_>_location_qualifier:
+        Desc: General location qualifier (excluding laterality) for this bodySite
+        Enum:
+        - entire_(qualifier_value)
+    category:
+        Desc: A code that classifies the general type of observation being made.
+        Type: TBD
+        Req: true
+    category_>_us-core:
+        Desc: Indicates the type of medication request (for example, where the medication
+            is expected to be consumed or administered (i.e. inpatient or outpatient)).
+        Type: TBD
+    clinical_status:
+        Desc: The clinical status of the condition.
+        Type: TBD
+    code:
+        Desc: The specific procedure that is performed. Use text if the exact nature
+            of the procedure cannot be coded (e.g. "Laparoscopic Appendectomy").
+        Type: TBD
+        Req: true
+    collection:
+        Desc: Details concerning the specimen collection.
+        Type: TBD
+    collection_>_body_site:
+        Desc: Anatomical location from which the specimen was collected (if subject
+            is a patient). This is the target site.  This element is not used for
+            environmental specimens.
+        Type: TBD
+    collection_>_body_site_>_laterality_qualifier:
+        Desc: Laterality qualifier for this bodySite
+        Enum:
+        - left_(qualifier_value)
+        - midline_(qualifier_value)
+        - right_(qualifier_value)
+        - right_and_left_(qualifier_value)
+    collection_>_body_site_>_location_qualifier:
+        Desc: General location qualifier (excluding laterality) for this bodySite
+        Enum:
+        - entire_(qualifier_value)
+    communication_>_language:
+        Desc: The ISO-639-1 alpha 2 code in lower case for the language, optionally
+            followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in
+            upper case; e.g. "en" for English, or "en-US" for American English versus
+            "en-EN" for England English.
+        Type: TBD
+    comorbid_condition_absent:
+        Desc: A condition that is NOT present, related to the resource.
+        Type: TBD
+    comorbid_condition_present:
+        Desc: A condition that has a relationship with the resource.
+        Type: TBD
+    component:
+        Desc: Some observations have multiple component observations.  These component
+            observations are expressed as separate code value pairs that share the
+            same attributes.  Examples include systolic and diastolic component observations
+            for blood pressure measurement and multiple component observations for
+            genetics observations.
+        Type: TBD
+    component_>_copy-number:
+        Desc: "The copy number of the large variant. In HGVS, this is the numeric\
+            \ value following the \u201CX\u201D. It is a unit-less value. Note that\
+            \ a copy number of 1 can imply a deletion."
+        Type: TBD
+    component_>_cytogenetic-location:
+        Desc: The relevant chromosomal region. The combination of numbers and letters
+            provide a genetic 'address'.
+        Type: TBD
+    component_>_cytogenomic-nomenclature:
+        Desc: Fully describes a variant with a single code. Typically a large variant
+            such as a mosaic, abnormal chromosome numbers, etc.
+        Type: TBD
+    component_>_genomic-ref-seq:
+        Desc: ID of the genomic reference sequence, which includes transcribed and
+            non transcribed stretches.
+        Type: TBD
+    component_>_ranges-examined:
+        Desc: This term is used to report the region(s) of interest for sequencing
+            studies as one or more numeric ranges that identify the parts of the reference
+            sequence that are sequenced. These can be recorded as one or more HL7
+            numeric ranges using repeat delimiters to seperate multiple such ranges.
+        Type: TBD
+    component_>_region-description:
+        Desc: Description of region examined.
+        Type: string
+    component_>_sample-allelic-frequency:
+        Desc: The relative frequency of the allele at a given locus in the sample.
+        Type: TBD
+    component_>_tumor_longest_dimension:
+        Desc: The longest tumor dimension in cm or mm.
+        Req: true
+        Type: TBD
+    component_>_tumor_longest_dimension_>_value:
+        Desc: The information determined as a result of making the observation, if
+            the information has a simple value.
+        Type: TBD
+    component_>_tumor_other_dimension:
+        Desc: The second or third tumor dimension in cm or mm.
+        Type: TBD
+    component_>_tumor_other_dimension_>_value:
+        Desc: The information determined as a result of making the observation, if
+            the information has a simple value.
+        Type: TBD
+    component_>_value:
+        Desc: The information determined as a result of making the observation, if
+            the information has a simple value.
+        Type: TBD
+    component_>_variation-code:
+        Desc: Accession number in a variant database such as ClinVar, given for cross-reference.
+        Type: TBD
+    data_absent_reason:
+        Desc: Provides a reason why the expected value in the element Observation.value[x]
+            is missing.
+        Type: TBD
+    deceased:
+        Desc: Indicates if the individual is deceased or not.
+        Type: TBD
+    description:
+        Desc: A text description of the radiotherapy volume, which SHOULD contain
+            any additional information above and beyond the location and locationQualifier
+            that describe the volume.
+        Type: string
+    dosage_instruction:
+        Desc: Indicates how the medication is to be used by the patient.
+        Type: TBD
+    dosage_instruction_>_text:
+        Desc: Free text dosage instructions e.g. SIG.
+        Type: string
+    dose_delivered_to_volume:
+        Desc: Dose delivered to a given radiotherapy volume.
+        Type: TBD
+    dose_delivered_to_volume_>_fractions_delivered:
+        Desc: The number of fractions delivered to this volume.
+        Type: TBD
+    dose_delivered_to_volume_>_total_dose_delivered:
+        Desc: The total amount of physical radiation delivered to this volume within
+            the scope of this dose delivery, i.e., dose delivered from the Procedure
+            in which this extension is used.
+        Type: TBD
+    dose_delivered_to_volume_>_volume:
+        Desc: A BodyStructure resource representing volume in the body where radiation
+            was delivered, for example, Chest Wall Lymph Nodes.
+        Req: true
+        Type: TBD
+    effective:
+        Desc: The time or time-period the observed value is asserted as being true.
+            For biological subjects - e.g. human patients - this is usually called
+            the "physiologically relevant time". This is usually either the time of
+            the procedure or of specimen collection, but very often the source of
+            the date/time is not known, only the date/time itself.
+        Type: datetime
+    effective_>_effective_date_time:
+        Desc: The time or time-period the observed value is asserted as being true.
+            For biological subjects - e.g. human patients - this is usually called
+            the "physiologically relevant time". This is usually either the time of
+            the procedure or of specimen collection, but very often the source of
+            the date/time is not known, only the date/time itself.
+        Type: datetime
+    encounter:
+        Desc: The Encounter during which this [x] was created or to which the creation
+            of this record is tightly associated.
+        Type: TBD
+    entry:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Req: true
+        Type: TBD
+    entry_>_cancer_patient:
+        Desc: The Cancer Patient whose data is included in the bundle.
+        Req: true
+        Type: TBD
+    entry_>_cancer_patient_>_resource:
+        Desc: \-
+        Type: TBD
+    entry_>_mcode_body_structures:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Type: TBD
+    entry_>_mcode_conditions:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Type: TBD
+    entry_>_mcode_diagnostic_reports:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Type: TBD
+    entry_>_mcode_medication_administrations:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Type: TBD
+    entry_>_mcode_medication_requests:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Type: TBD
+    entry_>_mcode_observations:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Type: TBD
+    entry_>_mcode_procedures:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Type: TBD
+    entry_>_mcode_specimens:
+        Desc: An entry in a bundle resource - will either contain a resource or information
+            about a resource (transactions and history only).
+        Type: TBD
+    entry_>_resource:
+        Desc: The Resource for the entry. The purpose/meaning of the resource is determined
+            by the Bundle.type.
+        Type: TBD
+    evidence_type:
+        Desc: Categorization of the kind of evidence contributing to a clinical judgment
+            on cancer disease progression.
+        Type: TBD
+    extension:
+        Desc: An Extension
+        Type: TBD
+    extension_>_asserted_date:
+        Desc: The date on which the existence of the Condition was first asserted
+            or acknowledged.
+        Type: datetime
+    extension_>_histology_morphology_behavior:
+        Desc: An extension describing the morphologic and behavioral characteristics
+            of the cancer.
+        Enum:
+        - in_situ_melanocytic_morphology_(morphologic_abnormality)
+        - malignant_neoplasm_with_pilar_differentiation_(morphologic_abnormality)
+    extension_>_related_condition:
+        Desc: Associates this tumor with a cancer condition. This could be a causal
+            association (e.g., this is believed to be the primary tumor causing the
+            cancer) or a different type of relationship (e.g., this tumor is a metastasis)
+        Type: TBD
+    extension_>_related_condition_>_value:
+        Desc: Value of extension - must be one of a constrained set of the data types
+            (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a
+            list).
+        Type: TBD
+    extension_>_related_primary_cancer_condition:
+        Desc: A reference to the primary cancer condition that provides context for
+            this resource.
+        Type: TBD
+    focus:
+        Desc: The actual focus of an observation when it is not the patient of record
+            representing something or someone associated with the patient such as
+            a spouse, parent, fetus, or donor. For example, fetus observations in
+            a mother's record.  The focus of an observation could also be an existing
+            condition,  an intervention, the subject's diet,  another observation
+            of the subject,  or a body structure such as tumor or implanted device.   An
+            example use case would be using the Observation resource to capture whether
+            the mother is trained to change her child's tracheostomy tube. In this
+            example, the child is the patient of record and the mother is the focus.
+        Type: TBD
+    gender:
+        Desc: Administrative Gender - the gender that the patient is considered to
+            have for administration and record keeping purposes.
+        Type: TBD
+        Req: true
+    has_member_>_tnmcategory:
+        Desc: References to the prognostic factors affecting the stage, for example,
+            the T, N, and M categories.
+        Type: TBD
+    histology_morphology_behavior:
+        Desc: An extension describing the morphologic and behavioral characteristics
+            of the cancer.
+        Enum:
+        - in_situ_melanocytic_morphology_(morphologic_abnormality)
+        - malignant_neoplasm_with_pilar_differentiation_(morphologic_abnormality)
+    identifier:
+        Desc: An identifier for this patient.
+        Req: true
+        Type: TBD
+    identifier_>_body_structure_identifier:
+        Desc: An identifier - identifies some entity uniquely and unambiguously. Typically
+            this is used for business identifiers.
+        Type: TBD
+    identifier_>_body_structure_identifier_>_value:
+        Desc: The portion of the identifier typically relevant to the user and which
+            is unique within the context of the system.
+        Type: string
+    identifier_>_display_name:
+        Desc: Identifier for this instance of the anatomical structure.
+        Type: TBD
+    identifier_>_display_name_>_value:
+        Desc: The portion of the identifier typically relevant to the user and which
+            is unique within the context of the system.
+        Type: string
+    identifier_>_system:
+        Desc: Establishes the namespace for the value - that is, a URL that describes
+            a set values that are unique.
+        Type: TBD
+    identifier_>_value:
+        Desc: The portion of the identifier typically relevant to the user and which
+            is unique within the context of the system.
+        Type: string
+    intent:
+        Desc: Whether the request is a proposal, plan, or an original order.
+        Type: TBD
+        Req: true
+    interpretation:
+        Desc: A categorical assessment of an observation value.  For example, high,
+            low, normal.
+        Type: TBD
+    issued:
+        Desc: The date and time that this version of the report was made available
+            to providers, typically after the report was reviewed and verified.
+        Type: TBD
+    location:
+        Desc: The location and locationQualifier codes specify a TG263 body structure
+            comprising the irradiated volume.
+        Enum:
+        - abducens_nerve_structure_(body_structure)
+        - accessory_nerve_structure_(body_structure)
+        - adrenal_structure_(body_structure)
+        - airway_structure_(body_structure)
+        - anal_canal_structure_(body_structure)
+        - anus_part_(body_structure)
+        - aortic_structure_(body_structure)
+        - aortic_valve_structure_(body_structure)
+        - appendix_structure_(body_structure)
+        - arytenoid_cartilage_structure_(body_structure)
+        - ascending_aorta_structure_(body_structure)
+        - ascending_colon_structure_(body_structure)
+        - atrial_structure_(body_structure)
+        - axillary_lymph_node_structure_(body_structure)
+        - body_structure_(body_structure)
+        - bone_marrow_structure_(body_structure)
+        - bone_part_(body_structure)
+        - bone_structure_of_acetabulum_(body_structure)
+        - bone_structure_of_atlas_(body_structure)
+        - bone_structure_of_axis_(body_structure)
+        - bone_structure_of_clavicle_(body_structure)
+        - bone_structure_of_cranium_(body_structure)
+        - bone_structure_of_eighth_rib_(body_structure)
+        - bone_structure_of_eleventh_rib_(body_structure)
+        - bone_structure_of_femur_(body_structure)
+        - bone_structure_of_fibula_(body_structure)
+        - bone_structure_of_fifth_rib_(body_structure)
+        - bone_structure_of_first_rib_(body_structure)
+        - bone_structure_of_fourth_rib_(body_structure)
+        - bone_structure_of_humerus_(body_structure)
+        - bone_structure_of_ilium_(body_structure)
+        - bone_structure_of_incus_(body_structure)
+        - bone_structure_of_ischium_(body_structure)
+        - bone_structure_of_lumbar_vertebra_(body_structure)
+        - bone_structure_of_mandible_(body_structure)
+        - bone_structure_of_maxilla_(body_structure)
+        - bone_structure_of_ninth_rib_(body_structure)
+        - bone_structure_of_radius_(body_structure)
+        - bone_structure_of_rib_(body_structure)
+        - bone_structure_of_scapula_(body_structure)
+        - bone_structure_of_second_rib_(body_structure)
+        - bone_structure_of_seventh_rib_(body_structure)
+        - bone_structure_of_shaft_of_femur_(body_structure)
+        - bone_structure_of_sixth_rib_(body_structure)
+        - bone_structure_of_tenth_rib_(body_structure)
+        - bone_structure_of_third_rib_(body_structure)
+        - bone_structure_of_thirteenth_rib_(body_structure)
+        - bone_structure_of_thoracic_vertebra_(body_structure)
+        - bone_structure_of_twelfth_rib_(body_structure)
+        - both_lips_(body_structure)
+        - brachial_plexus_structure_(body_structure)
+        - brain_structure_(body_structure)
+        - brainstem_structure_(body_structure)
+        - branch_of_brachiocephalic_artery_(body_structure)
+        - breast_structure_(body_structure)
+        - bronchial_structure_(body_structure)
+        - bronchopulmonary_lymph_node_group_(body_structure)
+        - cardiac_pacemaker,_device_(physical_object)
+        - cardiac_valve_structure_(body_structure)
+        - cardiac_ventricular_structure_(body_structure)
+        - carotid_artery_structure_(body_structure)
+        - cauda_equina_structure_(body_structure)
+        - cecum_structure_(body_structure)
+        - cerebellar_hemisphere_structure_(body_structure)
+        - cerebellar_structure_(body_structure)
+        - cerebral_hemisphere_structure_(body_structure)
+        - cervical_esophagus_structure_(body_structure)
+        - cervical_lymph_node_structure_(body_structure)
+        - cervical_spinal_cord_structure_(body_structure)
+        - cervix_uteri_structure_(body_structure)
+        - chest_wall_structure_(body_structure)
+        - circumflex_humeral_artery_(body_structure)
+        - circumflex_iliac_artery_(body_structure)
+        - cochlear_structure_(body_structure)
+        - colon_structure_(body_structure)
+        - common_bile_duct_structure_(body_structure)
+        - common_iliac_artery_structure_(body_structure)
+        - common_iliac_lymph_node_group_(body_structure)
+        - constrictor_muscle_of_pharynx_structure_(body_structure)
+        - corneal_structure_(body_structure)
+        - coronary_artery_structure_(body_structure)
+        - corpus_cavernosum_structure_(body_structure)
+        - corpus_spongiosum_structure_(body_structure)
+        - cricoid_cartilage_structure_(body_structure)
+        - descending_colon_structure_(body_structure)
+        - diaphragm_structure_(body_structure)
+        - digastric_muscle_structure_(body_structure)
+        - duodenal_structure_(body_structure)
+        - ear_structure_(body_structure)
+        - elbow_joint_structure_(body_structure)
+        - elbow_region_structure_(body_structure)
+        - entire_body_as_a_whole_(body_structure)
+        - entire_tongue_(body_structure)
+        - esophageal_structure_(body_structure)
+        - estimated_contoured_volume_of_bowel_in_peritoneal_cavity_using_radiographic_imaging_(observable_entity)
+        - estimated_contoured_volume_of_small_bowel_in_peritoneal_cavity_using_imaging_(observable_entity)
+        - ethmoid_bone_structure_(body_structure)
+        - ethmoid_sinus_structure_(body_structure)
+        - facial_nerve_structure_(body_structure)
+        - frontal_bone_structure_(body_structure)
+        - frontal_lobe_structure_(body_structure)
+        - frontal_sinus_structure_(body_structure)
+        - gallbladder_structure_(body_structure)
+        - genital_structure_(body_structure)
+        - glenohumeral_joint_structure_(body_structure)
+        - glossopharyngeal_nerve_structure_(body_structure)
+        - glottis_structure_(body_structure)
+        - hard_palate_structure_(body_structure)
+        - heart_structure_(body_structure)
+        - hip_joint_structure_(body_structure)
+        - hippocampal_structure_(body_structure)
+        - hyoid_bone_structure_(body_structure)
+        - hypoglossal_nerve_structure_(body_structure)
+        - hypopharyngeal_structure_(body_structure)
+        - hypothalamic_structure_(body_structure)
+        - ileal_structure_(body_structure)
+        - inferior_surface_of_vaginal_cervix_(body_structure)
+        - inguinofemoral_lymph_node_group_(body_structure)
+        - intercostal_lymph_node_(body_structure)
+        - internal_iliac_lymph_node_group_(body_structure)
+        - internal_jugular_vein_structure_(body_structure)
+        - internal_mammary_lymph_node_group_(body_structure)
+        - intestinal_structure_(body_structure)
+        - jejunal_structure_(body_structure)
+        - joint_structure_(body_structure)
+        - jugular_fossa_(body_structure)
+        - kidney_structure_(body_structure)
+        - knee_region_structure_(body_structure)
+        - lacrimal_bone_structure_(body_structure)
+        - lacrimal_gland_structure_(body_structure)
+        - laryngeal_structure_(body_structure)
+        - liver_structure_(body_structure)
+        - lumbar_spinal_cord_structure_(body_structure)
+        - lung_structure_(body_structure)
+        - lymph_node_of_aortopulmonary_window_(body_structure)
+        - main_bronchus_structure_(body_structure)
+        - malleus_structure_(body_structure)
+        - masseter_muscle_structure_(body_structure)
+        - mastoid_structure_(body_structure)
+        - maxillary_sinus_structure_(body_structure)
+        - mediastinal_lymph_node_structure_(body_structure)
+        - mediastinal_structure_(body_structure)
+        - mitral_valve_structure_(body_structure)
+        - nasal_bone_structure_(body_structure)
+        - nasal_cavity_structure_(body_structure)
+        - nasal_structure_(body_structure)
+        - nasal_turbinate_structure_(body_structure)
+        - nasopharyngeal_structure_(body_structure)
+        - nerve_root_structure_(body_structure)
+        - occipital_bone_structure_(body_structure)
+        - occipital_lobe_structure_(body_structure)
+        - oculomotor_nerve_structure_(body_structure)
+        - optic_nerve_structure_(body_structure)
+        - oral_cavity_structure_(body_structure)
+        - oropharyngeal_structure_(body_structure)
+        - ovarian_structure_(body_structure)
+        - palatine_bone_structure_(body_structure)
+        - pancreas_and_jejunum_(combined_site)_(body_structure)
+        - pancreatic_structure_(body_structure)
+        - parathyroid_structure_(body_structure)
+        - parietal_bone_structure_(body_structure)
+        - parietal_lobe_structure_(body_structure)
+        - parotid_gland_structure_(body_structure)
+        - pelvic_lymph_node_group_(body_structure)
+        - penile_structure_(body_structure)
+        - pericardial_structure_(body_structure)
+        - perineal_structure_(body_structure)
+        - peripheral_nerve_structure_(body_structure)
+        - peritoneal_sac_structure_(body_structure)
+        - pharyngeal_structure_(body_structure)
+        - pineal_structure_(body_structure)
+        - pituitary_structure_(body_structure)
+        - pontine_structure_(body_structure)
+        - portahepatis_lymph_node_group_(body_structure)
+        - portal_vein_structure_(body_structure)
+        - presacral_lymph_node_group_(body_structure)
+        - prostatic_structure_(body_structure)
+        - prostatic_urethra_structure_(body_structure)
+        - pulmonary_artery_structure_(body_structure)
+        - pulmonary_valve_structure_(body_structure)
+        - rectum_structure_(body_structure)
+        - rectum_wall_structure_(body_structure)
+        - renal_pelvis_structure_(body_structure)
+        - retinal_structure_(body_structure)
+        - sacral_plexus_structure_(body_structure)
+        - sacral_spinal_cord_structure_(body_structure)
+        - sacral_vertebra_structure_(body_structure)
+        - scalp_structure_(body_structure)
+        - scar_(morphologic_abnormality)
+        - scrotal_structure_(body_structure)
+        - seminal_vesicle_structure_(body_structure)
+        - sigmoid_colon_structure_(body_structure)
+        - skeletal_and/or_smooth_muscle_structure_(body_structure)
+        - skin_structure_(body_structure)
+        - skin_structure_of_anterior_abdominal_wall_(body_structure)
+        - skin_structure_of_perineum_(body_structure)
+        - soft_palate_structure_(body_structure)
+        - space_of_ventricular_system_of_brain_(body_structure)
+        - sphenoid_bone_structure_(body_structure)
+        - sphenoid_sinus_structure_(body_structure)
+        - spinal_canal_structure_(body_structure)
+        - spinal_cord_structure_(body_structure)
+        - spinal_dura_mater_structure_(body_structure)
+        - splenic_structure_(body_structure)
+        - stapes_structure_(body_structure)
+        - stomach_structure_(body_structure)
+        - structure_of_anterior_descending_branch_of_left_coronary_artery_(body_structure)
+        - structure_of_aortic_lymph_node_(body_structure)
+        - structure_of_apical_axillary_lymph_node_(body_structure)
+        - structure_of_azygous_vein_(body_structure)
+        - structure_of_body_of_eighth_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_eleventh_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_fifth_cervical_vertebra_(body_structure)
+        - structure_of_body_of_fifth_lumbar_vertebra_(body_structure)
+        - structure_of_body_of_fifth_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_first_lumbar_vertebra_(body_structure)
+        - structure_of_body_of_first_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_fourth_cervical_vertebra_(body_structure)
+        - structure_of_body_of_fourth_lumbar_vertebra_(body_structure)
+        - structure_of_body_of_fourth_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_ninth_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_second_lumbar_vertebra_(body_structure)
+        - structure_of_body_of_second_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_seventh_cervical_vertebra_(body_structure)
+        - structure_of_body_of_seventh_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_sixth_cervical_vertebra_(body_structure)
+        - structure_of_body_of_sixth_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_tenth_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_third_cervical_vertebra_(body_structure)
+        - structure_of_body_of_third_lumbar_vertebra_(body_structure)
+        - structure_of_body_of_third_thoracic_vertebra_(body_structure)
+        - structure_of_body_of_thirteenth__thoracic_vertebra_(body_structure)
+        - structure_of_body_of_tongue_(body_structure)
+        - structure_of_body_of_twelfth__thoracic_vertebra_(body_structure)
+        - structure_of_body_of_vertebra_(body_structure)
+        - structure_of_brachiocephalic_vein_(body_structure)
+        - structure_of_bulb_of_penis_(body_structure)
+        - structure_of_carina_of_trachea_(body_structure)
+        - structure_of_celiac_artery_(body_structure)
+        - structure_of_central_axillary_lymph_node_(body_structure)
+        - structure_of_cerebrum_(body_structure)
+        - structure_of_cisterna_pontis_(body_structure)
+        - structure_of_common_iliac_vein_(body_structure)
+        - structure_of_condyloid_process_of_mandible_(body_structure)
+        - structure_of_conjunctiva_of_left_eye_(body_structure)
+        - structure_of_conjunctiva_of_right_eye_(body_structure)
+        - structure_of_coronoid_process_of_mandible_(body_structure)
+        - structure_of_cortex_of_kidney_(body_structure)
+        - structure_of_cribriform_plate_(body_structure)
+        - structure_of_cricopharyngeal_part_of_inferior_constrictor_pharyngeus_muscle_(body_structure)
+        - structure_of_diaphragmatic_lymph_node_(body_structure)
+        - structure_of_epiphyseal_plate_(body_structure)
+        - structure_of_external_iliac_artery_(body_structure)
+        - structure_of_external_iliac_lymph_node_(body_structure)
+        - structure_of_external_iliac_vein_(body_structure)
+        - structure_of_external_jugular_vein_(body_structure)
+        - structure_of_eye_proper_(body_structure)
+        - structure_of_femoral_artery_(body_structure)
+        - structure_of_fifth_sacral_vertebra_(body_structure)
+        - structure_of_first_sacral_vertebra_(body_structure)
+        - structure_of_fourth_sacral_vertebra_(body_structure)
+        - structure_of_gastrohepatic_ligament_(body_structure)
+        - structure_of_great_blood_vessel_(organ)_(body_structure)
+        - structure_of_head_of_femur_(body_structure)
+        - structure_of_head_of_pancreas_(body_structure)
+        - structure_of_hilum_of_kidney_(body_structure)
+        - structure_of_hilum_of_spleen_(body_structure)
+        - structure_of_iliac_lymph_node_(body_structure)
+        - structure_of_inferior_hypophyseal_artery_(body_structure)
+        - structure_of_innominate_bone_and/or_sacrum_and/or_coccyx_(body_structure)
+        - structure_of_innominate_lymph_node_(body_structure)
+        - structure_of_internal_iliac_artery_(body_structure)
+        - structure_of_internal_iliac_lymph_node_(body_structure)
+        - structure_of_internal_iliac_vein_(body_structure)
+        - structure_of_intrapulmonary_lymph_node_(body_structure)
+        - structure_of_jugular_vein_(body_structure)
+        - structure_of_large_intestine_(body_structure)
+        - structure_of_lateral_axillary_lymph_node_(body_structure)
+        - structure_of_lateral_pterygoid_muscle_(body_structure)
+        - structure_of_lens_of_eye_(body_structure)
+        - structure_of_lobe_of_lung_(body_structure)
+        - structure_of_lymph_node_(body_structure)
+        - structure_of_medial_pterygoid_muscle_(body_structure)
+        - structure_of_neck_of_femur_(body_structure)
+        - structure_of_obturator_lymph_node_(body_structure)
+        - structure_of_odontoid_process_of_axis_(body_structure)
+        - structure_of_optic_chiasma_(body_structure)
+        - structure_of_orbit_proper_(body_structure)
+        - structure_of_paramammary_lymph_node_(body_structure)
+        - structure_of_parametrium_(body_structure)
+        - structure_of_parasternal_lymph_node_(body_structure)
+        - structure_of_pectoral_axillary_lymph_node_(body_structure)
+        - structure_of_platysma_muscle_(body_structure)
+        - structure_of_posterior_fossa_of_cranial_cavity_(body_structure)
+        - structure_of_pterygoid_muscle_(body_structure)
+        - structure_of_pulmonary_vein_great_vessel_(body_structure)
+        - structure_of_quadriceps_tendon_(body_structure)
+        - structure_of_red_bone_marrow_(body_structure)
+        - structure_of_retropharyngeal_space_(body_structure)
+        - structure_of_retrostyloid_space_(body_structure)
+        - structure_of_root_of_tongue_(body_structure)
+        - structure_of_second_sacral_vertebra_(body_structure)
+        - structure_of_small_intestine_(body_structure)
+        - structure_of_sphincter_ani_muscle_(body_structure)
+        - structure_of_sternocleidomastoid_muscle_(body_structure)
+        - structure_of_subclavian_artery_(body_structure)
+        - structure_of_subclavian_vein_(body_structure)
+        - structure_of_subscapular_axillary_lymph_node_(body_structure)
+        - structure_of_superior_hypophyseal_artery_(body_structure)
+        - structure_of_supraclavicular_lymph_node_(body_structure)
+        - structure_of_supraglottic_space_(body_structure)
+        - structure_of_suprapatellar_bursa_(body_structure)
+        - structure_of_suprasellar_region_(body_structure)
+        - structure_of_tail_of_pancreas_(body_structure)
+        - structure_of_temporalis_muscle_(body_structure)
+        - structure_of_third_sacral_vertebra_(body_structure)
+        - structure_of_vertebral_artery_(body_structure)
+        - structure_of_wall_of_urinary_bladder_(body_structure)
+        - sublingual_gland_structure_(body_structure)
+        - submandibular_salivary_gland_structure_(body_structure)
+        - superior_mesenteric_artery_structure_(body_structure)
+        - symphysis_pubis_structure_(body_structure)
+        - temporal_bone_structure_(body_structure)
+        - temporal_lobe_structure_(body_structure)
+        - temporomandibular_joint_structure_(body_structure)
+        - tendon_structure_(body_structure)
+        - testis_structure_(body_structure)
+        - thoracic_duct_structure_(body_structure)
+        - thoracic_spinal_cord_structure_(body_structure)
+        - thymus_gland_structure_(body_structure)
+        - thyroid_cartilage_structure_(body_structure)
+        - thyroid_structure_(body_structure)
+        - tongue_structure_(body_structure)
+        - tonsillar_structure_(palatine)_(body_structure)
+        - tracheal_structure_(body_structure)
+        - tracheobronchial_lymph_node_group_(body_structure)
+        - transverse_colon_structure_(body_structure)
+        - tricuspid_valve_structure_(body_structure)
+        - trigeminal_nerve_structure_(body_structure)
+        - tumor_bed_(morphologic_abnormality)
+        - ureteric_structure_(body_structure)
+        - urethral_structure_(body_structure)
+        - urinary_bladder_structure_(body_structure)
+        - uterine_structure_(body_structure)
+        - vaginal_cuff_(morphologic_abnormality)
+        - vaginal_structure_(body_structure)
+        - vaginal_wall_(body_structure)
+        - vena_caval_structure_(body_structure)
+        - vestibulocochlear_nerve_structure_(body_structure)
+        - vocal_cord_structure_(body_structure)
+        - vomer_bone_structure_(body_structure)
+        - vulval_structure_(body_structure)
+        - zygomatic_bone_structure_(body_structure)
+    location_qualifier:
+        Desc: Qualifiers that together with the associated location code specify the
+            TG263 body structure comprising the irradiated volume.
+        Enum:
+        - central_(qualifier_value)
+        - core_(qualifier_value)
+        - distal_(qualifier_value)
+        - entire_(qualifier_value)
+        - external_(qualifier_value)
+        - inferior_(qualifier_value)
+        - internal_(qualifier_value)
+        - juxta-posed_(qualifier_value)
+        - left_(qualifier_value)
+        - level_1_(qualifier_value)
+        - level_2_(qualifier_value)
+        - level_3_(qualifier_value)
+        - lower_(qualifier_value)
+        - lymph_node_level_i_(qualifier_value)
+        - lymph_node_level_ia_(qualifier_value)
+        - lymph_node_level_ib_(qualifier_value)
+        - lymph_node_level_ii_(qualifier_value)
+        - lymph_node_level_iia_(qualifier_value)
+        - lymph_node_level_iib_(qualifier_value)
+        - lymph_node_level_iii_(qualifier_value)
+        - lymph_node_level_iv_(qualifier_value)
+        - lymph_node_level_iva_(qualifier_value)
+        - lymph_node_level_ivb_(qualifier_value)
+        - lymph_node_level_ix_(qualifier_value)
+        - lymph_node_level_v_(qualifier_value)
+        - lymph_node_level_va_(qualifier_value)
+        - lymph_node_level_vb_(qualifier_value)
+        - lymph_node_level_vc_(qualifier_value)
+        - lymph_node_level_vi_(qualifier_value)
+        - lymph_node_level_via_(qualifier_value)
+        - lymph_node_level_vib_(qualifier_value)
+        - lymph_node_level_vii_(qualifier_value)
+        - lymph_node_level_viia_(qualifier_value)
+        - lymph_node_level_viib_(qualifier_value)
+        - lymph_node_level_viii_(qualifier_value)
+        - lymph_node_level_x_(qualifier_value)
+        - lymph_node_level_xa_(qualifier_value)
+        - lymph_node_level_xb_(qualifier_value)
+        - middle_(qualifier_value)
+        - multiple_(qualifier_value)
+        - non-adjacent_(qualifier_value)
+        - oral_(qualifier_value)
+        - partial_(qualifier_value)
+        - peripheral_(qualifier_value)
+        - proximal_(qualifier_value)
+        - right_(qualifier_value)
+        - right_and_left_(qualifier_value)
+        - superior_(qualifier_value)
+        - surface_(qualifier_value)
+        - upper_(qualifier_value)
+    medication:
+        Desc: Identifies the medication that was administered. This is either a link
+            to a resource representing the details of the medication or a simple attribute
+            carrying a code that identifies the medication from a known list of medications.
+        Type: TBD
+        Req: true
+    method:
+        Desc: 'The staging system or protocol used to determine the stage, stage group,
+            or category of the cancer based on its extent. When the staging system
+            is implied by Observation.code, Observation.method is not required. However,
+            when Observation.code does not imply a staging system (for example, if
+            the code is SNOMED CT 385388004 Lymphoma stage), then the staging system
+            must be specified in Observation.method. '
+        Enum:
+        - american_joint_commission_on_cancer,_cancer_staging_manual,_6th_edition_neoplasm_staging_system_(tumor_staging)
+        - american_joint_commission_on_cancer,_cancer_staging_manual,_7th_edition_neoplasm_staging_system_(tumor_staging)
+        - american_joint_commission_on_cancer,_cancer_staging_manual,_8th_edition_neoplasm_staging_system_(tumor_staging)
+        - american_urological_association_staging_system_for_prostate_cancer_(tumor_staging)
+        - ann_arbor_hodgkin's_disease_tumor_staging_system_(tumor_staging)
+        - ann_arbor_lymphoma_staging_system_(tumor_staging)
+        - ann_arbor_non-hodgkin's_lymphoma_tumor_staging_system_(tumor_staging)
+        - astler-coller_staging_system_(tumor_staging)
+        - atypical_teratoid/rhabdoid_tumor_staging_system
+        - australian_clinicopathological_staging_system_for_colorectal_cancer_(tumor_staging)
+        - binet_staging_classification_for_chronic_lymphocytic_leukemia_(tumor_staging)
+        - breslow_system_for_melanoma_staging_(tumor_staging)
+        - chronic_lymphocytic_leukemia-_modified_rai_staging_system
+        - clark_system_for_melanoma_staging_(tumor_staging)
+        - collaborative_staging
+        - cotswolds_hodgkin's_disease_tumor_staging_system_(tumor_staging)
+        - derkay_staging_system
+        - dukes_staging_system_(tumor_staging)
+        - embryonal_tumor_with_multilayered_rosettes_staging_system
+        - enneking_staging_system
+        - enneking_surgical_staging_system_(tumor_staging)
+        - evans_staging_system
+        - figo_staging_system_and_modified_world_health_organization_[who]_prognostic_scoring_system_for_gestational_trophoblastic_neoplasms
+        - hepatocellular_carcinoma_by_bclc_stage
+        - indiana_university_testicular_tumor_staging_system_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_ovarian_tumor_staging_system_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_staging_system_for_cervical_carcinoma_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_staging_system_for_endometrial_carcinoma_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_staging_system_for_epithelial_tumor_of_ovary_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_staging_system_for_vulvar_carcinoma_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_staging_system_for_vulvar_melanoma_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_staging_system_of_gynecological_malignancy_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_uterine_tumor_staging_system_(tumor_staging)
+        - international_federation_of_gynecology_and_obstetrics_vaginal_tumor_staging_system_(tumor_staging)
+        - international_germ_cell_consensus_classification_(tumor_staging)
+        - international_germ_cell_consensus_risk_classification
+        - international_staging_system_for_multiple_myeloma_(staging_scale)
+        - lugano_classification_hodgkin_lymphoma_by_ajcc_v8_stage
+        - marshall_modification_of_jewett-strong_staging_system_for_urinary_bladder_tumor_(tumor_staging)
+        - masaoka-koga_stage_classification_for_thymic_malignancies_(tumor_staging)
+        - medulloblastoma_staging_system
+        - modified_astler-coller_staging_system_(tumor_staging)
+        - modified_chang_staging_system_for_medulloblastoma
+        - modified_dukes_staging_system_(tumor_staging)
+        - non-seminomatous_germ_cell_tumor_international_germ_cell_consensus_risk_classification
+        - pineoblastoma_staging_system
+        - rai_staging_system_for_chronic_lymphocytic_leukemia_(tumor_staging)
+        - reese-ellsworth_staging_system
+        - revised_international_staging_system_for_multiple_myeloma_(staging_scale)
+        - seminoma_international_germ_cell_tumor_consensus_risk_classification
+        - stannard_staging_system_for_retinoblastoma_(tumor_staging)
+        - surveillance_epidemiology_and_end_results_program_extent_of_disease,_2018_edition_(tumor_staging)
+        - thymoma_by_masaoka-koga_stage
+        - tnm_ovary_neoplasm_staging
+        - trophoblastic_malignancy_staging_system_(tumor_staging)
+        - uicc_classification_of_malignant_tumours_7th_edition_(tumor_staging)
+        - uicc_classification_of_malignant_tumours_8th_edition_(tumor_staging)
+        - veterans_administration_lung_study_group_clinical_classification
+        - walter_reed_testicular_tumor_staging_system_(tumor_staging)
+        - whitmore-jewett_staging_system
+    modality_and_technique:
+        Desc: Extension capturing modality and technique of a given radiotherapy procedure.  The
+            allowed combinations of modality and technique are constrained by invariants,
+            one per modality.
+        Type: TBD
+    modality_and_technique_>_modality:
+        Desc: Extension capturing a modality of external beam or brachytherapy radiation
+            procedures.
+        Req: true
+        Type: TBD
+    modality_and_technique_>_technique:
+        Desc: Extension capturing a technique of external beam or brachytherapy radiation
+            procedures.
+        Type: TBD
+    morphology:
+        Desc: The kind of structure being represented by the body structure at `BodyStructure.location`.  This
+            can define both normal and abnormal morphologies.
+        Enum:
+        - clinical_target_volume_(observable_entity)
+        - gross_tumor_volume_(observable_entity)
+        - internal_gross_tumor_volume_(observable_entity)
+        - internal_target_volume_(observable_entity)
+        - irradiated_volume_of_organ_at_risk_(observable_entity)
+        - planning_target_volume_(observable_entity)
+    name:
+        Desc: A name associated with the individual.
+        Req: true
+        Type: TBD
+    name_>_family:
+        Desc: The part of a name that links to the genealogy. In some cultures (e.g.
+            Eritrea) the family name of a son is the first name of his father.
+        Type: string
+    name_>_given:
+        Desc: Given name.
+        Type: string
+    onset:
+        Desc: Estimated or actual date or date-time  the condition began, in the opinion
+            of the clinician.
+        Type: TBD
+    patient:
+        Desc: The patient for which a radiotherapy procedure is planned or performed.
+        Req: true
+        Type: TBD
+    performed:
+        Desc: Estimated or actual date, date-time, period, or age when the procedure
+            was performed.  Allows a period to support complex procedures that span
+            more than one date, and also allows for the length of the procedure to
+            be captured.
+        Type: TBD
+    performer:
+        Desc: The diagnostic service that is responsible for issuing the report.
+        Type: TBD
+    reason_code:
+        Desc: A code indicating why the medication was given.
+        Enum:
+        - acute_erythroid_leukemia,_in_relapse
+        - acute_erythroid_leukemia,_in_remission
+        - acute_erythroid_leukemia,_not_having_achieved_remission
+        - acute_leukemia_of_unspecified_cell_type,_in_relapse
+        - acute_leukemia_of_unspecified_cell_type,_in_remission
+        - acute_leukemia_of_unspecified_cell_type_not_having_achieved_remission
+        - acute_lymphoblastic_leukemia,_in_relapse
+        - acute_lymphoblastic_leukemia,_in_remission
+        - acute_lymphoblastic_leukemia_not_having_achieved_remission
+        - acute_megakaryoblastic_leukemia,_in_relapse
+        - acute_megakaryoblastic_leukemia,_in_remission
+        - acute_megakaryoblastic_leukemia_not_having_achieved_remission
+        - acute_monoblastic/monocytic_leukemia,_in_relapse
+        - acute_monoblastic/monocytic_leukemia,_in_remission
+        - acute_monoblastic/monocytic_leukemia,_not_having_achieved_remission
+        - acute_myeloblastic_leukemia,_in_relapse
+        - acute_myeloblastic_leukemia,_in_remission
+        - acute_myeloblastic_leukemia,_not_having_achieved_remission
+        - acute_myeloid_leukemia_with_11q23_abnormality_in_relapse
+        - acute_myeloid_leukemia_with_11q23_abnormality_in_remission
+        - acute_myeloid_leukemia_with_11q23_abnormality_not_having_achieved_remission
+        - acute_myeloid_leukemia_with_multilineage_dysplasia,_in_relapse
+        - acute_myeloid_leukemia_with_multilineage_dysplasia,_in_remission
+        - acute_myeloid_leukemia_with_multilineage_dysplasia_not_having_achieved_remission
+        - acute_myelomonocytic_leukemia,_in_relapse
+        - acute_myelomonocytic_leukemia,_in_remission
+        - acute_myelomonocytic_leukemia,_not_having_achieved_remission
+        - acute_panmyelosis_with_myelofibrosis,_in_relapse
+        - acute_panmyelosis_with_myelofibrosis,_in_remission
+        - acute_panmyelosis_with_myelofibrosis_not_having_achieved_remission
+        - acute_promyelocytic_leukemia,_in_relapse
+        - acute_promyelocytic_leukemia,_in_remission
+        - acute_promyelocytic_leukemia,_not_having_achieved_remission
+        - adult_t-cell_lymphoma/leukemia_(htlv-1-associated)_in_relapse
+        - adult_t-cell_lymphoma/leukemia_(htlv-1-associated)_in_remission
+        - adult_t-cell_lymphoma/leukemia_(htlv-1-associated)_not_having_achieved_remission
+        - aggressive_systemic_mastocytosis
+        - anaplastic_large_cell_lymphoma,_alk-negative,_extranodal_and_solid_organ_sites
+        - anaplastic_large_cell_lymphoma,_alk-negative,_intra-abdominal_lymph_nodes
+        - anaplastic_large_cell_lymphoma,_alk-negative,_intrapelvic_lymph_nodes
+        - anaplastic_large_cell_lymphoma,_alk-negative,_intrathoracic_lymph_nodes
+        - anaplastic_large_cell_lymphoma,_alk-negative,_lymph_nodes_of_axilla_and_upper_limb
+        - anaplastic_large_cell_lymphoma,_alk-negative,_lymph_nodes_of_head,_face,_and_neck
+        - anaplastic_large_cell_lymphoma,_alk-negative,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - anaplastic_large_cell_lymphoma,_alk-negative,_lymph_nodes_of_multiple_sites
+        - anaplastic_large_cell_lymphoma,_alk-negative,_spleen
+        - anaplastic_large_cell_lymphoma,_alk-negative,_unspecified_site
+        - anaplastic_large_cell_lymphoma,_alk-positive,_extranodal_and_solid_organ_sites
+        - anaplastic_large_cell_lymphoma,_alk-positive,_intra-abdominal_lymph_nodes
+        - anaplastic_large_cell_lymphoma,_alk-positive,_intrapelvic_lymph_nodes
+        - anaplastic_large_cell_lymphoma,_alk-positive,_intrathoracic_lymph_nodes
+        - anaplastic_large_cell_lymphoma,_alk-positive,_lymph_nodes_of_axilla_and_upper_limb
+        - anaplastic_large_cell_lymphoma,_alk-positive,_lymph_nodes_of_head,_face,_and_neck
+        - anaplastic_large_cell_lymphoma,_alk-positive,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - anaplastic_large_cell_lymphoma,_alk-positive,_lymph_nodes_of_multiple_sites
+        - anaplastic_large_cell_lymphoma,_alk-positive,_spleen
+        - anaplastic_large_cell_lymphoma,_alk-positive,_unspecified_site
+        - angioimmunoblastic_t-cell_lymphoma
+        - angiosarcoma_of_liver
+        - atypical_chronic_myeloid_leukemia,_bcr/abl-negative,_in_relapse
+        - atypical_chronic_myeloid_leukemia,_bcr/abl-negative,_in_remission
+        - atypical_chronic_myeloid_leukemia,_bcr/abl-negative_not_having_achieved_remission
+        - benign_neoplasm_of_brain,_infratentorial
+        - benign_neoplasm_of_brain,_supratentorial
+        - benign_neoplasm_of_brain,_unspecified
+        - benign_neoplasm_of_brain_and_other_parts_of_central_nervous_system_||_benign_neoplasm_of_central_nervous_system,_unspecified
+        - benign_neoplasm_of_cerebral_meninges
+        - benign_neoplasm_of_cranial_nerves
+        - benign_neoplasm_of_craniopharyngeal_duct
+        - benign_neoplasm_of_meninges_||_benign_neoplasm_of_meninges,_unspecified
+        - benign_neoplasm_of_other_specified_parts_of_central_nervous_system
+        - benign_neoplasm_of_pineal_gland
+        - benign_neoplasm_of_pituitary_gland
+        - benign_neoplasm_of_spinal_cord
+        - benign_neoplasm_of_spinal_meninges
+        - blastic_nk-cell_lymphoma
+        - burkitt_lymphoma,_extranodal_and_solid_organ_sites
+        - burkitt_lymphoma,_intra-abdominal_lymph_nodes
+        - burkitt_lymphoma,_intrapelvic_lymph_nodes
+        - burkitt_lymphoma,_intrathoracic_lymph_nodes
+        - burkitt_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - burkitt_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - burkitt_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - burkitt_lymphoma,_lymph_nodes_of_multiple_sites
+        - burkitt_lymphoma,_spleen
+        - burkitt_lymphoma,_unspecified_site
+        - carcinoma_in_situ,_unspecified
+        - carcinoma_in_situ_of_anus_and_anal_canal
+        - carcinoma_in_situ_of_bladder
+        - carcinoma_in_situ_of_breast_||_unspecified_type_of_carcinoma_in_situ_of_breast_||_unspecified_type_of_carcinoma_in_situ_of_unspecified_breast
+        - carcinoma_in_situ_of_bronchus_and_lung
+        - carcinoma_in_situ_of_buccal_mucosa
+        - carcinoma_in_situ_of_colon
+        - carcinoma_in_situ_of_digestive_organ,_unspecified
+        - carcinoma_in_situ_of_endometrium
+        - carcinoma_in_situ_of_esophagus
+        - carcinoma_in_situ_of_eye
+        - carcinoma_in_situ_of_floor_of_mouth
+        - carcinoma_in_situ_of_gingiva_and_edentulous_alveolar_ridge
+        - carcinoma_in_situ_of_hard_palate
+        - carcinoma_in_situ_of_labial_mucosa_and_vermilion_border
+        - carcinoma_in_situ_of_larynx
+        - carcinoma_in_situ_of_left_bronchus_and_lung
+        - carcinoma_in_situ_of_left_eye
+        - carcinoma_in_situ_of_lip,_oral_cavity_and_pharynx
+        - carcinoma_in_situ_of_liver,_gallbladder_and_bile_ducts
+        - carcinoma_in_situ_of_middle_ear_and_respiratory_system
+        - carcinoma_in_situ_of_oral_cavity,_esophagus_and_stomach
+        - carcinoma_in_situ_of_oral_cavity,_unspecified_site
+        - carcinoma_in_situ_of_other_and_unspecified_digestive_organs
+        - carcinoma_in_situ_of_other_and_unspecified_female_genital_organs
+        - carcinoma_in_situ_of_other_and_unspecified_genital_organs
+        - carcinoma_in_situ_of_other_and_unspecified_male_genital_organs
+        - carcinoma_in_situ_of_other_and_unspecified_parts_of_intestine
+        - carcinoma_in_situ_of_other_and_unspecified_sites
+        - carcinoma_in_situ_of_other_and_unspecified_urinary_organs
+        - carcinoma_in_situ_of_other_female_genital_organs
+        - carcinoma_in_situ_of_other_male_genital_organs
+        - carcinoma_in_situ_of_other_parts_of_intestine
+        - carcinoma_in_situ_of_other_parts_of_respiratory_system
+        - carcinoma_in_situ_of_other_specified_digestive_organs
+        - carcinoma_in_situ_of_other_specified_sites
+        - carcinoma_in_situ_of_other_urinary_organs
+        - carcinoma_in_situ_of_penis
+        - carcinoma_in_situ_of_pharynx
+        - carcinoma_in_situ_of_rectosigmoid_junction
+        - carcinoma_in_situ_of_rectum
+        - carcinoma_in_situ_of_respiratory_system,_unspecified
+        - carcinoma_in_situ_of_right_bronchus_and_lung
+        - carcinoma_in_situ_of_right_eye
+        - carcinoma_in_situ_of_scrotum
+        - carcinoma_in_situ_of_soft_palate
+        - carcinoma_in_situ_of_stomach
+        - carcinoma_in_situ_of_thyroid_and_other_endocrine_glands
+        - carcinoma_in_situ_of_tongue
+        - carcinoma_in_situ_of_trachea
+        - carcinoma_in_situ_of_unspecified_bronchus_and_lung
+        - carcinoma_in_situ_of_unspecified_eye
+        - carcinoma_in_situ_of_unspecified_female_genital_organs
+        - carcinoma_in_situ_of_unspecified_male_genital_organs
+        - carcinoma_in_situ_of_unspecified_part_of_intestine
+        - carcinoma_in_situ_of_unspecified_urinary_organ
+        - carcinoma_in_situ_of_vagina
+        - carcinoma_in_situ_of_vulva
+        - chronic_leukemia_of_unspecified_cell_type,_in_relapse
+        - chronic_leukemia_of_unspecified_cell_type,_in_remission
+        - chronic_leukemia_of_unspecified_cell_type_not_having_achieved_remission
+        - chronic_lymphocytic_leukemia_of_b-cell_type_in_relapse
+        - chronic_lymphocytic_leukemia_of_b-cell_type_in_remission
+        - chronic_lymphocytic_leukemia_of_b-cell_type_not_having_achieved_remission
+        - chronic_myeloid_leukemia,_bcr/abl-positive,_in_relapse
+        - chronic_myeloid_leukemia,_bcr/abl-positive,_in_remission
+        - chronic_myeloid_leukemia,_bcr/abl-positive,_not_having_achieved_remission
+        - chronic_myelomonocytic_leukemia,_in_relapse
+        - chronic_myelomonocytic_leukemia,_in_remission
+        - chronic_myelomonocytic_leukemia_not_having_achieved_remission
+        - chronic_myeloproliferative_disease
+        - cutaneous_follicle_center_lymphoma,_extranodal_and_solid_organ_sites
+        - cutaneous_follicle_center_lymphoma,_intra-abdominal_lymph_nodes
+        - cutaneous_follicle_center_lymphoma,_intrapelvic_lymph_nodes
+        - cutaneous_follicle_center_lymphoma,_intrathoracic_lymph_nodes
+        - cutaneous_follicle_center_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - cutaneous_follicle_center_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - cutaneous_follicle_center_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - cutaneous_follicle_center_lymphoma,_lymph_nodes_of_multiple_sites
+        - cutaneous_follicle_center_lymphoma,_spleen
+        - cutaneous_follicle_center_lymphoma,_unspecified_site
+        - cutaneous_t-cell_lymphoma,_unspecified,_extranodal_and_solid_organ_sites
+        - cutaneous_t-cell_lymphoma,_unspecified,_intra-abdominal_lymph_nodes
+        - cutaneous_t-cell_lymphoma,_unspecified,_intrapelvic_lymph_nodes
+        - cutaneous_t-cell_lymphoma,_unspecified,_intrathoracic_lymph_nodes
+        - cutaneous_t-cell_lymphoma,_unspecified,_lymph_nodes_of_axilla_and_upper_limb
+        - cutaneous_t-cell_lymphoma,_unspecified,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - cutaneous_t-cell_lymphoma,_unspecified,_lymph_nodes_of_multiple_sites
+        - cutaneous_t-cell_lymphoma,_unspecified,_spleen
+        - cutaneous_t-cell_lymphoma,_unspecified,_unspecified_site
+        - cutaneous_t-cell_lymphoma,_unspecified_lymph_nodes_of_head,_face,_and_neck
+        - cytologic_evidence_of_malignancy_on_smear_of_anus
+        - cytologic_evidence_of_malignancy_on_smear_of_vagina
+        - cytological_evidence_of_malignancy_on_anal_papanicolaou_smear_(finding)
+        - cytological_evidence_of_malignancy_on_vaginal_papanicolaou_smear_(finding)
+        - diffuse_follicle_center_lymphoma,_extranodal_and_solid_organ_sites
+        - diffuse_follicle_center_lymphoma,_intra-abdominal_lymph_nodes
+        - diffuse_follicle_center_lymphoma,_intrapelvic_lymph_nodes
+        - diffuse_follicle_center_lymphoma,_intrathoracic_lymph_nodes
+        - diffuse_follicle_center_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - diffuse_follicle_center_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - diffuse_follicle_center_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - diffuse_follicle_center_lymphoma,_lymph_nodes_of_multiple_sites
+        - diffuse_follicle_center_lymphoma,_spleen
+        - diffuse_follicle_center_lymphoma,_unspecified_site
+        - diffuse_large_b-cell_lymphoma,_extranodal_and_solid_organ_sites
+        - diffuse_large_b-cell_lymphoma,_intra-abdominal_lymph_nodes
+        - diffuse_large_b-cell_lymphoma,_intrapelvic_lymph_nodes
+        - diffuse_large_b-cell_lymphoma,_intrathoracic_lymph_nodes
+        - diffuse_large_b-cell_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - diffuse_large_b-cell_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - diffuse_large_b-cell_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - diffuse_large_b-cell_lymphoma,_lymph_nodes_of_multiple_sites
+        - diffuse_large_b-cell_lymphoma,_spleen
+        - diffuse_large_b-cell_lymphoma,_unspecified_site_||_non-follicular_(diffuse)_lymphoma,_unspecified,_unspecified_site
+        - disseminated_malignant_neoplasm,_unspecified
+        - enteropathy-type_(intestinal)_t-cell_lymphoma
+        - essential_(hemorrhagic)_thrombocythemia
+        - extramedullary_plasmacytoma_in_relapse
+        - extramedullary_plasmacytoma_in_remission
+        - extramedullary_plasmacytoma_not_having_achieved_remission
+        - extranodal_marginal_zone_b-cell_lymphoma_of_mucosa-associated_lymphoid_tissue_[malt-lymphoma]
+        - extranodal_nk/t-cell_lymphoma,_nasal_type
+        - follicular_lymphoma,_unspecified,_extranodal_and_solid_organ_sites
+        - follicular_lymphoma,_unspecified,_intra-abdominal_lymph_nodes
+        - follicular_lymphoma,_unspecified,_intrapelvic_lymph_nodes
+        - follicular_lymphoma,_unspecified,_intrathoracic_lymph_nodes
+        - follicular_lymphoma,_unspecified,_lymph_nodes_of_axilla_and_upper_limb
+        - follicular_lymphoma,_unspecified,_lymph_nodes_of_head,_face,_and_neck
+        - follicular_lymphoma,_unspecified,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - follicular_lymphoma,_unspecified,_lymph_nodes_of_multiple_sites
+        - follicular_lymphoma,_unspecified,_spleen
+        - follicular_lymphoma,_unspecified,_unspecified_site
+        - follicular_lymphoma_grade_i,_extranodal_and_solid_organ_sites
+        - follicular_lymphoma_grade_i,_intra-abdominal_lymph_nodes
+        - follicular_lymphoma_grade_i,_intrapelvic_lymph_nodes
+        - follicular_lymphoma_grade_i,_intrathoracic_lymph_nodes
+        - follicular_lymphoma_grade_i,_lymph_nodes_of_axilla_and_upper_limb
+        - follicular_lymphoma_grade_i,_lymph_nodes_of_head,_face,_and_neck
+        - follicular_lymphoma_grade_i,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - follicular_lymphoma_grade_i,_lymph_nodes_of_multiple_sites
+        - follicular_lymphoma_grade_i,_spleen
+        - follicular_lymphoma_grade_i,_unspecified_site
+        - follicular_lymphoma_grade_ii,_extranodal_and_solid_organ_sites
+        - follicular_lymphoma_grade_ii,_intra-abdominal_lymph_nodes
+        - follicular_lymphoma_grade_ii,_intrapelvic_lymph_nodes
+        - follicular_lymphoma_grade_ii,_intrathoracic_lymph_nodes
+        - follicular_lymphoma_grade_ii,_lymph_nodes_of_axilla_and_upper_limb
+        - follicular_lymphoma_grade_ii,_lymph_nodes_of_head,_face,_and_neck
+        - follicular_lymphoma_grade_ii,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - follicular_lymphoma_grade_ii,_lymph_nodes_of_multiple_sites
+        - follicular_lymphoma_grade_ii,_spleen
+        - follicular_lymphoma_grade_ii,_unspecified_site
+        - follicular_lymphoma_grade_iii,_unspecified,_extranodal_and_solid_organ_sites
+        - follicular_lymphoma_grade_iii,_unspecified,_intra-abdominal_lymph_nodes
+        - follicular_lymphoma_grade_iii,_unspecified,_intrapelvic_lymph_nodes
+        - follicular_lymphoma_grade_iii,_unspecified,_intrathoracic_lymph_nodes
+        - follicular_lymphoma_grade_iii,_unspecified,_lymph_nodes_of_axilla_and_upper_limb
+        - follicular_lymphoma_grade_iii,_unspecified,_lymph_nodes_of_head,_face,_and_neck
+        - follicular_lymphoma_grade_iii,_unspecified,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - follicular_lymphoma_grade_iii,_unspecified,_lymph_nodes_of_multiple_sites
+        - follicular_lymphoma_grade_iii,_unspecified,_spleen
+        - follicular_lymphoma_grade_iii,_unspecified,_unspecified_site
+        - follicular_lymphoma_grade_iiia,_extranodal_and_solid_organ_sites
+        - follicular_lymphoma_grade_iiia,_intra-abdominal_lymph_nodes
+        - follicular_lymphoma_grade_iiia,_intrapelvic_lymph_nodes
+        - follicular_lymphoma_grade_iiia,_intrathoracic_lymph_nodes
+        - follicular_lymphoma_grade_iiia,_lymph_nodes_of_axilla_and_upper_limb
+        - follicular_lymphoma_grade_iiia,_lymph_nodes_of_head,_face,_and_neck
+        - follicular_lymphoma_grade_iiia,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - follicular_lymphoma_grade_iiia,_lymph_nodes_of_multiple_sites
+        - follicular_lymphoma_grade_iiia,_spleen
+        - follicular_lymphoma_grade_iiia,_unspecified_site
+        - follicular_lymphoma_grade_iiib,_extranodal_and_solid_organ_sites
+        - follicular_lymphoma_grade_iiib,_intra-abdominal_lymph_nodes
+        - follicular_lymphoma_grade_iiib,_intrapelvic_lymph_nodes
+        - follicular_lymphoma_grade_iiib,_intrathoracic_lymph_nodes
+        - follicular_lymphoma_grade_iiib,_lymph_nodes_of_axilla_and_upper_limb
+        - follicular_lymphoma_grade_iiib,_lymph_nodes_of_head,_face,_and_neck
+        - follicular_lymphoma_grade_iiib,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - follicular_lymphoma_grade_iiib,_lymph_nodes_of_multiple_sites
+        - follicular_lymphoma_grade_iiib,_spleen
+        - follicular_lymphoma_grade_iiib,_unspecified_site
+        - gastrointestinal_stromal_tumor,_unspecified_site
+        - gastrointestinal_stromal_tumor_of_esophagus
+        - gastrointestinal_stromal_tumor_of_large_intestine
+        - gastrointestinal_stromal_tumor_of_other_sites
+        - gastrointestinal_stromal_tumor_of_rectum
+        - gastrointestinal_stromal_tumor_of_small_intestine
+        - gastrointestinal_stromal_tumor_of_stomach
+        - hairy_cell_leukemia,_in_relapse
+        - hairy_cell_leukemia,_in_remission
+        - hairy_cell_leukemia_not_having_achieved_remission
+        - heavy_chain_disease
+        - hemangioma_of_intracranial_structures
+        - hepatoblastoma
+        - hepatosplenic_t-cell_lymphoma
+        - histiocytic_sarcoma
+        - hodgkin_lymphoma,_unspecified,_extranodal_and_solid_organ_sites
+        - hodgkin_lymphoma,_unspecified,_intra-abdominal_lymph_nodes
+        - hodgkin_lymphoma,_unspecified,_intrapelvic_lymph_nodes
+        - hodgkin_lymphoma,_unspecified,_intrathoracic_lymph_nodes
+        - hodgkin_lymphoma,_unspecified,_lymph_nodes_of_axilla_and_upper_limb
+        - hodgkin_lymphoma,_unspecified,_lymph_nodes_of_head,_face,_and_neck
+        - hodgkin_lymphoma,_unspecified,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - hodgkin_lymphoma,_unspecified,_lymph_nodes_of_multiple_sites
+        - hodgkin_lymphoma,_unspecified,_spleen
+        - hodgkin_lymphoma,_unspecified,_unspecified_site
+        - hypereosinophilic_syndrome_[hes],_unspecified_||_idiopathic_hypereosinophilic_syndrome_[hes]
+        - immunoproliferative_small_intestinal_diseases
+        - in_situ_melanocytic_morphology_(morphologic_abnormality)
+        - intraductal_carcinoma_in_situ_of_breast_||_intraductal_carcinoma_in_situ_of_unspecified_breast
+        - intraductal_carcinoma_in_situ_of_left_breast
+        - intraductal_carcinoma_in_situ_of_right_breast
+        - intrahepatic_bile_duct_carcinoma
+        - juvenile_myelomonocytic_leukemia,_in_relapse
+        - juvenile_myelomonocytic_leukemia,_in_remission
+        - juvenile_myelomonocytic_leukemia_not_having_achieved_remission
+        - kaposi's_sarcoma,_unspecified
+        - kaposi's_sarcoma_of_gastrointestinal_sites
+        - kaposi's_sarcoma_of_left_lung
+        - kaposi's_sarcoma_of_lymph_nodes
+        - kaposi's_sarcoma_of_other_sites
+        - kaposi's_sarcoma_of_palate
+        - kaposi's_sarcoma_of_right_lung
+        - kaposi's_sarcoma_of_skin
+        - kaposi's_sarcoma_of_soft_tissue
+        - kaposi's_sarcoma_of_unspecified_lung
+        - leukemia,_unspecified,_in_relapse
+        - leukemia,_unspecified,_in_remission
+        - leukemia,_unspecified_not_having_achieved_remission
+        - liver_cell_carcinoma
+        - lobular_carcinoma_in_situ_of_breast_||_lobular_carcinoma_in_situ_of_unspecified_breast
+        - lobular_carcinoma_in_situ_of_left_breast
+        - lobular_carcinoma_in_situ_of_right_breast
+        - lymphoblastic_(diffuse)_lymphoma,_extranodal_and_solid_organ_sites
+        - lymphoblastic_(diffuse)_lymphoma,_intra-abdominal_lymph_nodes
+        - lymphoblastic_(diffuse)_lymphoma,_intrapelvic_lymph_nodes
+        - lymphoblastic_(diffuse)_lymphoma,_intrathoracic_lymph_nodes
+        - lymphoblastic_(diffuse)_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - lymphoblastic_(diffuse)_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - lymphoblastic_(diffuse)_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - lymphoblastic_(diffuse)_lymphoma,_lymph_nodes_of_multiple_sites
+        - lymphoblastic_(diffuse)_lymphoma,_spleen
+        - lymphoblastic_(diffuse)_lymphoma,_unspecified_site
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_extranodal_and_solid_organ_sites
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_intra-abdominal_lymph_nodes
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_intrapelvic_lymph_nodes
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_intrathoracic_lymph_nodes
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_lymph_nodes_of_multiple_sites
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_spleen
+        - lymphocyte-rich_classical_hodgkin_lymphoma,_unspecified_site
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_extranodal_and_solid_organ_sites
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_intra-abdominal_lymph_nodes
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_intrapelvic_lymph_nodes
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_intrathoracic_lymph_nodes
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_lymph_nodes_of_multiple_sites
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_spleen
+        - lymphocyte_depleted_classical_hodgkin_lymphoma,_unspecified_site
+        - lymphocytic_variant_hypereosinophilic_syndrome_[lhes]
+        - lymphoid_leukemia,_unspecified,_in_relapse
+        - lymphoid_leukemia,_unspecified,_in_remission
+        - lymphoid_leukemia,_unspecified_not_having_achieved_remission
+        - malignant_(primary)_neoplasm,_unspecified
+        - malignant_carcinoid_tumor_of_the_appendix
+        - malignant_carcinoid_tumor_of_the_ascending_colon
+        - malignant_carcinoid_tumor_of_the_bronchus_and_lung
+        - malignant_carcinoid_tumor_of_the_cecum
+        - malignant_carcinoid_tumor_of_the_descending_colon
+        - malignant_carcinoid_tumor_of_the_duodenum
+        - malignant_carcinoid_tumor_of_the_foregut,_unspecified
+        - malignant_carcinoid_tumor_of_the_hindgut,_unspecified
+        - malignant_carcinoid_tumor_of_the_ileum
+        - malignant_carcinoid_tumor_of_the_jejunum
+        - malignant_carcinoid_tumor_of_the_kidney
+        - malignant_carcinoid_tumor_of_the_large_intestine,_unspecified_portion
+        - malignant_carcinoid_tumor_of_the_midgut,_unspecified
+        - malignant_carcinoid_tumor_of_the_rectum
+        - malignant_carcinoid_tumor_of_the_sigmoid_colon
+        - malignant_carcinoid_tumor_of_the_small_intestine,_unspecified_portion
+        - malignant_carcinoid_tumor_of_the_stomach
+        - malignant_carcinoid_tumor_of_the_thymus
+        - malignant_carcinoid_tumor_of_the_transverse_colon
+        - malignant_carcinoid_tumor_of_unspecified_site
+        - malignant_carcinoid_tumors_of_other_sites
+        - malignant_immunoproliferative_disease,_unspecified
+        - malignant_mast_cell_neoplasm,_unspecified_||_malignant_mast_cell_tumor
+        - malignant_melanoma_of_anal_skin
+        - malignant_melanoma_of_left_ear_and_external_auricular_canal
+        - malignant_melanoma_of_left_lower_eyelid,_including_canthus
+        - malignant_melanoma_of_left_lower_limb,_including_hip
+        - malignant_melanoma_of_left_upper_eyelid,_including_canthus
+        - malignant_melanoma_of_left_upper_limb,_including_shoulder
+        - malignant_melanoma_of_lip
+        - malignant_melanoma_of_nose
+        - malignant_melanoma_of_other_part_of_trunk
+        - malignant_melanoma_of_other_parts_of_face
+        - malignant_melanoma_of_overlapping_sites_of_skin
+        - malignant_melanoma_of_right_ear_and_external_auricular_canal
+        - malignant_melanoma_of_right_lower_eyelid,_including_canthus
+        - malignant_melanoma_of_right_lower_limb,_including_hip
+        - malignant_melanoma_of_right_upper_eyelid,_including_canthus
+        - malignant_melanoma_of_right_upper_limb,_including_shoulder
+        - malignant_melanoma_of_scalp_and_neck
+        - malignant_melanoma_of_skin,_unspecified
+        - malignant_melanoma_of_skin_of_breast
+        - malignant_melanoma_of_unspecified_ear_and_external_auricular_canal
+        - malignant_melanoma_of_unspecified_eyelid,_including_canthus
+        - malignant_melanoma_of_unspecified_lower_limb,_including_hip
+        - malignant_melanoma_of_unspecified_part_of_face
+        - malignant_melanoma_of_unspecified_upper_limb,_including_shoulder
+        - malignant_neoplasm_aryepiglottic_fold,_hypopharyngeal_aspect
+        - malignant_neoplasm_associated_with_transplanted_organ
+        - malignant_neoplasm_of_abdomen
+        - malignant_neoplasm_of_accessory_sinus,_unspecified
+        - malignant_neoplasm_of_ampulla_of_vater
+        - malignant_neoplasm_of_anal_canal
+        - malignant_neoplasm_of_anterior_floor_of_mouth
+        - malignant_neoplasm_of_anterior_mediastinum
+        - malignant_neoplasm_of_anterior_surface_of_epiglottis
+        - malignant_neoplasm_of_anterior_two-thirds_of_tongue,_part_unspecified
+        - malignant_neoplasm_of_anterior_wall_of_bladder
+        - malignant_neoplasm_of_anterior_wall_of_nasopharynx
+        - malignant_neoplasm_of_anus,_unspecified
+        - malignant_neoplasm_of_aortic_body_and_other_paraganglia
+        - malignant_neoplasm_of_appendix
+        - malignant_neoplasm_of_ascending_colon
+        - malignant_neoplasm_of_axillary_tail_of_left_female_breast
+        - malignant_neoplasm_of_axillary_tail_of_left_male_breast
+        - malignant_neoplasm_of_axillary_tail_of_right_female_breast
+        - malignant_neoplasm_of_axillary_tail_of_right_male_breast
+        - malignant_neoplasm_of_axillary_tail_of_unspecified_female_breast
+        - malignant_neoplasm_of_axillary_tail_of_unspecified_male_breast
+        - malignant_neoplasm_of_base_of_tongue
+        - malignant_neoplasm_of_biliary_tract,_unspecified
+        - malignant_neoplasm_of_bladder,_unspecified
+        - malignant_neoplasm_of_bladder_neck
+        - malignant_neoplasm_of_body_of_pancreas
+        - malignant_neoplasm_of_body_of_penis
+        - malignant_neoplasm_of_body_of_stomach
+        - malignant_neoplasm_of_bones_of_skull_and_face
+        - malignant_neoplasm_of_border_of_tongue
+        - malignant_neoplasm_of_brain,_unspecified
+        - malignant_neoplasm_of_brain_stem
+        - malignant_neoplasm_of_branchial_cleft
+        - malignant_neoplasm_of_cardia
+        - malignant_neoplasm_of_carotid_body
+        - malignant_neoplasm_of_cauda_equina
+        - malignant_neoplasm_of_cecum
+        - malignant_neoplasm_of_central_nervous_system,_unspecified
+        - malignant_neoplasm_of_central_portion_of_left_female_breast
+        - malignant_neoplasm_of_central_portion_of_left_male_breast
+        - malignant_neoplasm_of_central_portion_of_right_female_breast
+        - malignant_neoplasm_of_central_portion_of_right_male_breast
+        - malignant_neoplasm_of_central_portion_of_unspecified_female_breast
+        - malignant_neoplasm_of_central_portion_of_unspecified_male_breast
+        - malignant_neoplasm_of_cerebellum
+        - malignant_neoplasm_of_cerebral_meninges
+        - malignant_neoplasm_of_cerebral_ventricle
+        - malignant_neoplasm_of_cerebrum,_except_lobes_and_ventricles
+        - malignant_neoplasm_of_cervix_uteri,_unspecified
+        - malignant_neoplasm_of_cheek_mucosa
+        - malignant_neoplasm_of_clitoris
+        - malignant_neoplasm_of_cloacogenic_zone
+        - malignant_neoplasm_of_colon,_unspecified
+        - malignant_neoplasm_of_commissure_of_lip,_unspecified
+        - malignant_neoplasm_of_connective_and_soft_tissue,_unspecified
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_abdomen
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_head,_face_and_neck
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_left_lower_limb,_including_hip
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_left_upper_limb,_including_shoulder
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_pelvis
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_right_lower_limb,_including_hip
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_right_upper_limb,_including_shoulder
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_thorax
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_trunk,_unspecified
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_unspecified_lower_limb,_including_hip
+        - malignant_neoplasm_of_connective_and_soft_tissue_of_unspecified_upper_limb,_including_shoulder
+        - malignant_neoplasm_of_corpus_uteri,_unspecified
+        - malignant_neoplasm_of_cortex_of_left_adrenal_gland
+        - malignant_neoplasm_of_cortex_of_right_adrenal_gland
+        - malignant_neoplasm_of_cortex_of_unspecified_adrenal_gland
+        - malignant_neoplasm_of_craniopharyngeal_duct
+        - malignant_neoplasm_of_descended_left_testis
+        - malignant_neoplasm_of_descended_right_testis
+        - malignant_neoplasm_of_descending_colon
+        - malignant_neoplasm_of_dome_of_bladder
+        - malignant_neoplasm_of_dorsal_surface_of_tongue
+        - malignant_neoplasm_of_duodenum
+        - malignant_neoplasm_of_endocervix
+        - malignant_neoplasm_of_endocrine_gland,_unspecified
+        - malignant_neoplasm_of_endocrine_pancreas
+        - malignant_neoplasm_of_endometrium
+        - malignant_neoplasm_of_esophagus,_unspecified
+        - malignant_neoplasm_of_ethmoidal_sinus
+        - malignant_neoplasm_of_exocervix
+        - malignant_neoplasm_of_external_lip,_unspecified
+        - malignant_neoplasm_of_external_lower_lip
+        - malignant_neoplasm_of_external_upper_lip
+        - malignant_neoplasm_of_extrahepatic_bile_duct
+        - malignant_neoplasm_of_female_genital_organ,_unspecified
+        - malignant_neoplasm_of_floor_of_mouth,_unspecified
+        - malignant_neoplasm_of_frontal_lobe
+        - malignant_neoplasm_of_frontal_sinus
+        - malignant_neoplasm_of_fundus_of_stomach
+        - malignant_neoplasm_of_fundus_uteri
+        - malignant_neoplasm_of_gallbladder
+        - malignant_neoplasm_of_glans_penis
+        - malignant_neoplasm_of_glottis
+        - malignant_neoplasm_of_greater_curvature_of_stomach,_unspecified
+        - malignant_neoplasm_of_gum,_unspecified
+        - malignant_neoplasm_of_hard_palate
+        - malignant_neoplasm_of_head,_face_and_neck
+        - malignant_neoplasm_of_head_of_pancreas
+        - malignant_neoplasm_of_heart
+        - malignant_neoplasm_of_hepatic_flexure
+        - malignant_neoplasm_of_hypopharynx,_unspecified
+        - malignant_neoplasm_of_ileum
+        - malignant_neoplasm_of_ill-defined_sites_within_the_digestive_system
+        - malignant_neoplasm_of_intestinal_tract,_part_unspecified
+        - malignant_neoplasm_of_isthmus_uteri
+        - malignant_neoplasm_of_jejunum
+        - malignant_neoplasm_of_labium_majus
+        - malignant_neoplasm_of_labium_minus
+        - malignant_neoplasm_of_laryngeal_cartilage
+        - malignant_neoplasm_of_larynx,_unspecified
+        - malignant_neoplasm_of_lateral_floor_of_mouth
+        - malignant_neoplasm_of_lateral_wall_of_bladder
+        - malignant_neoplasm_of_lateral_wall_of_nasopharynx
+        - malignant_neoplasm_of_lateral_wall_of_oropharynx
+        - malignant_neoplasm_of_left_acoustic_nerve
+        - malignant_neoplasm_of_left_broad_ligament
+        - malignant_neoplasm_of_left_choroid
+        - malignant_neoplasm_of_left_ciliary_body
+        - malignant_neoplasm_of_left_conjunctiva
+        - malignant_neoplasm_of_left_cornea
+        - malignant_neoplasm_of_left_epididymis
+        - malignant_neoplasm_of_left_fallopian_tube
+        - malignant_neoplasm_of_left_kidney,_except_renal_pelvis
+        - malignant_neoplasm_of_left_lacrimal_gland_and_duct
+        - malignant_neoplasm_of_left_lower_limb
+        - malignant_neoplasm_of_left_main_bronchus
+        - malignant_neoplasm_of_left_olfactory_nerve
+        - malignant_neoplasm_of_left_optic_nerve
+        - malignant_neoplasm_of_left_orbit
+        - malignant_neoplasm_of_left_ovary
+        - malignant_neoplasm_of_left_renal_pelvis
+        - malignant_neoplasm_of_left_retina
+        - malignant_neoplasm_of_left_round_ligament
+        - malignant_neoplasm_of_left_spermatic_cord
+        - malignant_neoplasm_of_left_testis,_unspecified_whether_descended_or_undescended
+        - malignant_neoplasm_of_left_upper_limb
+        - malignant_neoplasm_of_left_ureter
+        - malignant_neoplasm_of_lesser_curvature_of_stomach,_unspecified
+        - malignant_neoplasm_of_lingual_tonsil
+        - malignant_neoplasm_of_lip,_unspecified
+        - malignant_neoplasm_of_lip,_unspecified,_inner_aspect
+        - malignant_neoplasm_of_liver,_not_specified_as_primary_or_secondary
+        - malignant_neoplasm_of_liver,_primary,_unspecified_as_to_type
+        - malignant_neoplasm_of_long_bones_of_left_lower_limb
+        - malignant_neoplasm_of_long_bones_of_right_lower_limb
+        - malignant_neoplasm_of_long_bones_of_unspecified_lower_limb
+        - malignant_neoplasm_of_lower-inner_quadrant_of_left_female_breast
+        - malignant_neoplasm_of_lower-inner_quadrant_of_left_male_breast
+        - malignant_neoplasm_of_lower-inner_quadrant_of_right_female_breast
+        - malignant_neoplasm_of_lower-inner_quadrant_of_right_male_breast
+        - malignant_neoplasm_of_lower-inner_quadrant_of_unspecified_female_breast
+        - malignant_neoplasm_of_lower-inner_quadrant_of_unspecified_male_breast
+        - malignant_neoplasm_of_lower-outer_quadrant_of_left_female_breast
+        - malignant_neoplasm_of_lower-outer_quadrant_of_left_male_breast
+        - malignant_neoplasm_of_lower-outer_quadrant_of_right_female_breast
+        - malignant_neoplasm_of_lower-outer_quadrant_of_right_male_breast
+        - malignant_neoplasm_of_lower-outer_quadrant_of_unspecified_female_breast
+        - malignant_neoplasm_of_lower-outer_quadrant_of_unspecified_male_breast
+        - malignant_neoplasm_of_lower_gum
+        - malignant_neoplasm_of_lower_lip,_inner_aspect
+        - malignant_neoplasm_of_lower_lobe,_left_bronchus_or_lung
+        - malignant_neoplasm_of_lower_lobe,_right_bronchus_or_lung
+        - malignant_neoplasm_of_lower_lobe,_unspecified_bronchus_or_lung
+        - malignant_neoplasm_of_lower_respiratory_tract,_part_unspecified
+        - malignant_neoplasm_of_lower_third_of_esophagus
+        - malignant_neoplasm_of_lymphoid,_hematopoietic_and_related_tissue,_unspecified
+        - malignant_neoplasm_of_major_salivary_gland,_unspecified
+        - malignant_neoplasm_of_male_genital_organ,_unspecified
+        - malignant_neoplasm_of_mandible
+        - malignant_neoplasm_of_maxillary_sinus
+        - malignant_neoplasm_of_mediastinum,_part_unspecified
+        - malignant_neoplasm_of_medulla_of_left_adrenal_gland
+        - malignant_neoplasm_of_medulla_of_right_adrenal_gland
+        - malignant_neoplasm_of_medulla_of_unspecified_adrenal_gland
+        - malignant_neoplasm_of_meninges,_unspecified
+        - malignant_neoplasm_of_middle_ear
+        - malignant_neoplasm_of_middle_lobe,_bronchus_or_lung
+        - malignant_neoplasm_of_middle_third_of_esophagus
+        - malignant_neoplasm_of_mouth,_unspecified
+        - malignant_neoplasm_of_myometrium
+        - malignant_neoplasm_of_nasal_cavity
+        - malignant_neoplasm_of_nasopharynx,_unspecified
+        - malignant_neoplasm_of_nipple_and_areola,_left_female_breast
+        - malignant_neoplasm_of_nipple_and_areola,_left_male_breast
+        - malignant_neoplasm_of_nipple_and_areola,_right_female_breast
+        - malignant_neoplasm_of_nipple_and_areola,_right_male_breast
+        - malignant_neoplasm_of_nipple_and_areola,_unspecified_female_breast
+        - malignant_neoplasm_of_nipple_and_areola,_unspecified_male_breast
+        - malignant_neoplasm_of_occipital_lobe
+        - malignant_neoplasm_of_oropharynx,_unspecified
+        - malignant_neoplasm_of_other_cranial_nerves
+        - malignant_neoplasm_of_other_parts_of_pancreas
+        - malignant_neoplasm_of_other_specified_female_genital_organs
+        - malignant_neoplasm_of_other_specified_male_genital_organs
+        - malignant_neoplasm_of_overlapping_sites_esophagus
+        - malignant_neoplasm_of_overlapping_sites_of_accessory_sinuses
+        - malignant_neoplasm_of_overlapping_sites_of_biliary_tract
+        - malignant_neoplasm_of_overlapping_sites_of_bladder
+        - malignant_neoplasm_of_overlapping_sites_of_bone_and_articular_cartilage_of_left_limb
+        - malignant_neoplasm_of_overlapping_sites_of_bone_and_articular_cartilage_of_right_limb
+        - malignant_neoplasm_of_overlapping_sites_of_bone_and_articular_cartilage_of_unspecified_limb
+        - malignant_neoplasm_of_overlapping_sites_of_brain
+        - malignant_neoplasm_of_overlapping_sites_of_cervix_uteri
+        - malignant_neoplasm_of_overlapping_sites_of_colon
+        - malignant_neoplasm_of_overlapping_sites_of_connective_and_soft_tissue
+        - malignant_neoplasm_of_overlapping_sites_of_corpus_uteri
+        - malignant_neoplasm_of_overlapping_sites_of_female_genital_organs
+        - malignant_neoplasm_of_overlapping_sites_of_floor_of_mouth
+        - malignant_neoplasm_of_overlapping_sites_of_heart,_mediastinum_and_pleura
+        - malignant_neoplasm_of_overlapping_sites_of_hypopharynx
+        - malignant_neoplasm_of_overlapping_sites_of_larynx
+        - malignant_neoplasm_of_overlapping_sites_of_left_bronchus_and_lung
+        - malignant_neoplasm_of_overlapping_sites_of_left_eye_and_adnexa
+        - malignant_neoplasm_of_overlapping_sites_of_left_female_breast
+        - malignant_neoplasm_of_overlapping_sites_of_left_male_breast
+        - malignant_neoplasm_of_overlapping_sites_of_lip
+        - malignant_neoplasm_of_overlapping_sites_of_lip,_oral_cavity_and_pharynx
+        - malignant_neoplasm_of_overlapping_sites_of_male_genital_organs
+        - malignant_neoplasm_of_overlapping_sites_of_nasopharynx
+        - malignant_neoplasm_of_overlapping_sites_of_oropharynx
+        - malignant_neoplasm_of_overlapping_sites_of_other_and_ill-defined_sites
+        - malignant_neoplasm_of_overlapping_sites_of_other_parts_of_mouth
+        - malignant_neoplasm_of_overlapping_sites_of_palate
+        - malignant_neoplasm_of_overlapping_sites_of_pancreas
+        - malignant_neoplasm_of_overlapping_sites_of_penis
+        - malignant_neoplasm_of_overlapping_sites_of_peripheral_nerves_and_autonomic_nervous_system
+        - malignant_neoplasm_of_overlapping_sites_of_rectum,_anus_and_anal_canal
+        - malignant_neoplasm_of_overlapping_sites_of_retroperitoneum_and_peritoneum
+        - malignant_neoplasm_of_overlapping_sites_of_right_bronchus_and_lung
+        - malignant_neoplasm_of_overlapping_sites_of_right_eye_and_adnexa
+        - malignant_neoplasm_of_overlapping_sites_of_right_female_breast
+        - malignant_neoplasm_of_overlapping_sites_of_right_male_breast
+        - malignant_neoplasm_of_overlapping_sites_of_small_intestine
+        - malignant_neoplasm_of_overlapping_sites_of_stomach
+        - malignant_neoplasm_of_overlapping_sites_of_tongue
+        - malignant_neoplasm_of_overlapping_sites_of_tonsil
+        - malignant_neoplasm_of_overlapping_sites_of_unspecified_bronchus_and_lung
+        - malignant_neoplasm_of_overlapping_sites_of_unspecified_eye_and_adnexa
+        - malignant_neoplasm_of_overlapping_sites_of_unspecified_female_breast
+        - malignant_neoplasm_of_overlapping_sites_of_unspecified_male_breast
+        - malignant_neoplasm_of_overlapping_sites_of_unspecified_parts_of_mouth
+        - malignant_neoplasm_of_overlapping_sites_of_urinary_organs
+        - malignant_neoplasm_of_overlapping_sites_of_vulva
+        - malignant_neoplasm_of_palate,_unspecified
+        - malignant_neoplasm_of_pancreas,_unspecified
+        - malignant_neoplasm_of_pancreatic_duct
+        - malignant_neoplasm_of_parametrium
+        - malignant_neoplasm_of_parathyroid_gland
+        - malignant_neoplasm_of_paraurethral_glands
+        - malignant_neoplasm_of_parietal_lobe
+        - malignant_neoplasm_of_parotid_gland
+        - malignant_neoplasm_of_pelvic_bones,_sacrum_and_coccyx
+        - malignant_neoplasm_of_penis,_unspecified
+        - malignant_neoplasm_of_peripheral_nerves_and_autonomic_nervous_system,_unspecified
+        - malignant_neoplasm_of_peripheral_nerves_of_abdomen
+        - malignant_neoplasm_of_peripheral_nerves_of_head,_face_and_neck
+        - malignant_neoplasm_of_peripheral_nerves_of_left_lower_limb,_including_hip
+        - malignant_neoplasm_of_peripheral_nerves_of_left_upper_limb,_including_shoulder
+        - malignant_neoplasm_of_peripheral_nerves_of_pelvis
+        - malignant_neoplasm_of_peripheral_nerves_of_right_lower_limb,_including_hip
+        - malignant_neoplasm_of_peripheral_nerves_of_right_upper_limb,_including_shoulder
+        - malignant_neoplasm_of_peripheral_nerves_of_thorax
+        - malignant_neoplasm_of_peripheral_nerves_of_trunk,_unspecified
+        - malignant_neoplasm_of_peripheral_nerves_of_unspecified_lower_limb,_including_hip
+        - malignant_neoplasm_of_peripheral_nerves_of_unspecified_upper_limb,_including_shoulder
+        - malignant_neoplasm_of_peripheral_nerves_of_upper_limb,_including_shoulder
+        - malignant_neoplasm_of_peritoneum,_unspecified
+        - malignant_neoplasm_of_pharynx,_unspecified
+        - malignant_neoplasm_of_pineal_gland
+        - malignant_neoplasm_of_pituitary_gland
+        - malignant_neoplasm_of_placenta
+        - malignant_neoplasm_of_pleura
+        - malignant_neoplasm_of_postcricoid_region
+        - malignant_neoplasm_of_posterior_mediastinum
+        - malignant_neoplasm_of_posterior_wall_of_bladder
+        - malignant_neoplasm_of_posterior_wall_of_hypopharynx
+        - malignant_neoplasm_of_posterior_wall_of_nasopharynx
+        - malignant_neoplasm_of_posterior_wall_of_oropharynx
+        - malignant_neoplasm_of_prepuce
+        - malignant_neoplasm_of_prostate
+        - malignant_neoplasm_of_pyloric_antrum
+        - malignant_neoplasm_of_pylorus
+        - malignant_neoplasm_of_pyriform_sinus
+        - malignant_neoplasm_of_rectosigmoid_junction
+        - malignant_neoplasm_of_rectum
+        - malignant_neoplasm_of_retromolar_area
+        - malignant_neoplasm_of_retroperitoneum
+        - malignant_neoplasm_of_ribs,_sternum_and_clavicle
+        - malignant_neoplasm_of_right_acoustic_nerve
+        - malignant_neoplasm_of_right_broad_ligament
+        - malignant_neoplasm_of_right_choroid
+        - malignant_neoplasm_of_right_ciliary_body
+        - malignant_neoplasm_of_right_conjunctiva
+        - malignant_neoplasm_of_right_cornea
+        - malignant_neoplasm_of_right_epididymis
+        - malignant_neoplasm_of_right_fallopian_tube
+        - malignant_neoplasm_of_right_kidney,_except_renal_pelvis
+        - malignant_neoplasm_of_right_lacrimal_gland_and_duct
+        - malignant_neoplasm_of_right_lower_limb
+        - malignant_neoplasm_of_right_main_bronchus
+        - malignant_neoplasm_of_right_olfactory_nerve
+        - malignant_neoplasm_of_right_optic_nerve
+        - malignant_neoplasm_of_right_orbit
+        - malignant_neoplasm_of_right_ovary
+        - malignant_neoplasm_of_right_renal_pelvis
+        - malignant_neoplasm_of_right_retina
+        - malignant_neoplasm_of_right_round_ligament
+        - malignant_neoplasm_of_right_spermatic_cord
+        - malignant_neoplasm_of_right_testis,_unspecified_whether_descended_or_undescended
+        - malignant_neoplasm_of_right_upper_limb
+        - malignant_neoplasm_of_right_ureter
+        - malignant_neoplasm_of_scapula_and_long_bones_of_left_upper_limb
+        - malignant_neoplasm_of_scapula_and_long_bones_of_right_upper_limb
+        - malignant_neoplasm_of_scapula_and_long_bones_of_unspecified_upper_limb
+        - malignant_neoplasm_of_scrotum
+        - malignant_neoplasm_of_short_bones_of_left_lower_limb
+        - malignant_neoplasm_of_short_bones_of_left_upper_limb
+        - malignant_neoplasm_of_short_bones_of_right_lower_limb
+        - malignant_neoplasm_of_short_bones_of_right_upper_limb
+        - malignant_neoplasm_of_short_bones_of_unspecified_lower_limb
+        - malignant_neoplasm_of_short_bones_of_unspecified_upper_limb
+        - malignant_neoplasm_of_sigmoid_colon
+        - malignant_neoplasm_of_small_intestine,_unspecified
+        - malignant_neoplasm_of_soft_palate
+        - malignant_neoplasm_of_specified_parts_of_peritoneum
+        - malignant_neoplasm_of_sphenoid_sinus
+        - malignant_neoplasm_of_spinal_cord
+        - malignant_neoplasm_of_spinal_meninges
+        - malignant_neoplasm_of_spleen
+        - malignant_neoplasm_of_splenic_flexure
+        - malignant_neoplasm_of_stomach,_unspecified
+        - malignant_neoplasm_of_subglottis
+        - malignant_neoplasm_of_sublingual_gland
+        - malignant_neoplasm_of_submandibular_gland
+        - malignant_neoplasm_of_superior_wall_of_nasopharynx
+        - malignant_neoplasm_of_supraglottis
+        - malignant_neoplasm_of_tail_of_pancreas
+        - malignant_neoplasm_of_temporal_lobe
+        - malignant_neoplasm_of_thorax
+        - malignant_neoplasm_of_thymus
+        - malignant_neoplasm_of_thyroid_gland
+        - malignant_neoplasm_of_tongue,_unspecified
+        - malignant_neoplasm_of_tonsil,_unspecified
+        - malignant_neoplasm_of_tonsillar_fossa
+        - malignant_neoplasm_of_tonsillar_pillar_(anterior)_(posterior)
+        - malignant_neoplasm_of_trachea
+        - malignant_neoplasm_of_transverse_colon
+        - malignant_neoplasm_of_trigone_of_bladder
+        - malignant_neoplasm_of_undescended_left_testis
+        - malignant_neoplasm_of_undescended_right_testis
+        - malignant_neoplasm_of_unspecified_acoustic_nerve
+        - malignant_neoplasm_of_unspecified_bones_and_articular_cartilage_of_left_limb
+        - malignant_neoplasm_of_unspecified_bones_and_articular_cartilage_of_limb
+        - malignant_neoplasm_of_unspecified_bones_and_articular_cartilage_of_right_limb
+        - malignant_neoplasm_of_unspecified_bones_and_articular_cartilage_of_unspecified_limb
+        - malignant_neoplasm_of_unspecified_broad_ligament
+        - malignant_neoplasm_of_unspecified_choroid
+        - malignant_neoplasm_of_unspecified_ciliary_body
+        - malignant_neoplasm_of_unspecified_conjunctiva
+        - malignant_neoplasm_of_unspecified_cornea
+        - malignant_neoplasm_of_unspecified_cranial_nerve
+        - malignant_neoplasm_of_unspecified_descended_testis
+        - malignant_neoplasm_of_unspecified_epididymis
+        - malignant_neoplasm_of_unspecified_fallopian_tube
+        - malignant_neoplasm_of_unspecified_kidney,_except_renal_pelvis
+        - malignant_neoplasm_of_unspecified_lacrimal_gland_and_duct
+        - malignant_neoplasm_of_unspecified_lower_limb
+        - malignant_neoplasm_of_unspecified_main_bronchus
+        - malignant_neoplasm_of_unspecified_olfactory_nerve
+        - malignant_neoplasm_of_unspecified_optic_nerve
+        - malignant_neoplasm_of_unspecified_orbit
+        - malignant_neoplasm_of_unspecified_ovary
+        - malignant_neoplasm_of_unspecified_part_of_left_adrenal_gland
+        - malignant_neoplasm_of_unspecified_part_of_left_bronchus_or_lung
+        - malignant_neoplasm_of_unspecified_part_of_right_adrenal_gland
+        - malignant_neoplasm_of_unspecified_part_of_right_bronchus_or_lung
+        - malignant_neoplasm_of_unspecified_part_of_unspecified_adrenal_gland
+        - malignant_neoplasm_of_unspecified_part_of_unspecified_bronchus_or_lung
+        - malignant_neoplasm_of_unspecified_renal_pelvis
+        - malignant_neoplasm_of_unspecified_retina
+        - malignant_neoplasm_of_unspecified_round_ligament
+        - malignant_neoplasm_of_unspecified_site_of_left_eye
+        - malignant_neoplasm_of_unspecified_site_of_left_female_breast
+        - malignant_neoplasm_of_unspecified_site_of_left_male_breast
+        - malignant_neoplasm_of_unspecified_site_of_right_eye
+        - malignant_neoplasm_of_unspecified_site_of_right_female_breast
+        - malignant_neoplasm_of_unspecified_site_of_right_male_breast
+        - malignant_neoplasm_of_unspecified_site_of_unspecified_eye
+        - malignant_neoplasm_of_unspecified_site_of_unspecified_female_breast
+        - malignant_neoplasm_of_unspecified_site_of_unspecified_male_breast
+        - malignant_neoplasm_of_unspecified_spermatic_cord
+        - malignant_neoplasm_of_unspecified_testis,_unspecified_whether_descended_or_undescended
+        - malignant_neoplasm_of_unspecified_undescended_testis
+        - malignant_neoplasm_of_unspecified_upper_limb
+        - malignant_neoplasm_of_unspecified_ureter
+        - malignant_neoplasm_of_upper-inner_quadrant_of_left_female_breast
+        - malignant_neoplasm_of_upper-inner_quadrant_of_left_male_breast
+        - malignant_neoplasm_of_upper-inner_quadrant_of_right_female_breast
+        - malignant_neoplasm_of_upper-inner_quadrant_of_right_male_breast
+        - malignant_neoplasm_of_upper-inner_quadrant_of_unspecified_female_breast
+        - malignant_neoplasm_of_upper-inner_quadrant_of_unspecified_male_breast
+        - malignant_neoplasm_of_upper-outer_quadrant_of_left_female_breast
+        - malignant_neoplasm_of_upper-outer_quadrant_of_left_male_breast
+        - malignant_neoplasm_of_upper-outer_quadrant_of_right_female_breast
+        - malignant_neoplasm_of_upper-outer_quadrant_of_right_male_breast
+        - malignant_neoplasm_of_upper-outer_quadrant_of_unspecified_female_breast
+        - malignant_neoplasm_of_upper-outer_quadrant_of_unspecified_male_breast
+        - malignant_neoplasm_of_upper_gum
+        - malignant_neoplasm_of_upper_lip,_inner_aspect
+        - malignant_neoplasm_of_upper_lobe,_left_bronchus_or_lung
+        - malignant_neoplasm_of_upper_lobe,_right_bronchus_or_lung
+        - malignant_neoplasm_of_upper_lobe,_unspecified_bronchus_or_lung
+        - malignant_neoplasm_of_upper_respiratory_tract,_part_unspecified
+        - malignant_neoplasm_of_upper_third_of_esophagus
+        - malignant_neoplasm_of_urachus
+        - malignant_neoplasm_of_ureteric_orifice
+        - malignant_neoplasm_of_urethra
+        - malignant_neoplasm_of_urinary_organ,_unspecified
+        - malignant_neoplasm_of_uterine_adnexa,_unspecified
+        - malignant_neoplasm_of_uterus,_part_unspecified
+        - malignant_neoplasm_of_uvula
+        - malignant_neoplasm_of_vagina
+        - malignant_neoplasm_of_vallecula
+        - malignant_neoplasm_of_ventral_surface_of_tongue
+        - malignant_neoplasm_of_vertebral_column
+        - malignant_neoplasm_of_vestibule_of_mouth
+        - malignant_neoplasm_of_vulva,_unspecified
+        - malignant_neoplasm_of_waldeyer's_ring
+        - malignant_neoplasm_pelvis
+        - malignant_neoplasm_with_pilar_differentiation_(morphologic_abnormality)
+        - malignant_neoplasm_with_pluriglanduar_involvement,_unspecified
+        - malignant_poorly_differentiated_neuroendocrine_tumors
+        - mantle_cell_lymphoma,_extranodal_and_solid_organ_sites
+        - mantle_cell_lymphoma,_intra-abdominal_lymph_nodes
+        - mantle_cell_lymphoma,_intrapelvic_lymph_nodes
+        - mantle_cell_lymphoma,_intrathoracic_lymph_nodes
+        - mantle_cell_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - mantle_cell_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - mantle_cell_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - mantle_cell_lymphoma,_lymph_nodes_of_multiple_sites
+        - mantle_cell_lymphoma,_spleen
+        - mantle_cell_lymphoma,_unspecified_site
+        - mast_cell_leukemia,_in_relapse
+        - mast_cell_leukemia,_in_remission
+        - mast_cell_leukemia_not_having_achieved_remission
+        - mast_cell_sarcoma
+        - mature_b-cell_leukemia_burkitt-type,_in_relapse
+        - mature_b-cell_leukemia_burkitt-type,_in_remission
+        - mature_b-cell_leukemia_burkitt-type_not_having_achieved_remission
+        - mature_t/nk-cell_lymphomas,_unspecified,_extranodal_and_solid_organ_sites
+        - mature_t/nk-cell_lymphomas,_unspecified,_intra-abdominal_lymph_nodes
+        - mature_t/nk-cell_lymphomas,_unspecified,_intrapelvic_lymph_nodes
+        - mature_t/nk-cell_lymphomas,_unspecified,_intrathoracic_lymph_nodes
+        - mature_t/nk-cell_lymphomas,_unspecified,_lymph_nodes_of_axilla_and_upper_limb
+        - mature_t/nk-cell_lymphomas,_unspecified,_lymph_nodes_of_head,_face,_and_neck
+        - mature_t/nk-cell_lymphomas,_unspecified,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - mature_t/nk-cell_lymphomas,_unspecified,_lymph_nodes_of_multiple_sites
+        - mature_t/nk-cell_lymphomas,_unspecified,_spleen
+        - mature_t/nk-cell_lymphomas,_unspecified,_unspecified_site
+        - meckel's_diverticulum,_malignant
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_extranodal_and_solid_organ_sites
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_intra-abdominal_lymph_nodes
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_intrapelvic_lymph_nodes
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_intrathoracic_lymph_nodes
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_lymph_nodes_of_multiple_sites
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_spleen
+        - mediastinal_(thymic)_large_b-cell_lymphoma,_unspecified_site
+        - melanoma_in_situ,_unspecified
+        - melanoma_in_situ_of_anal_skin
+        - melanoma_in_situ_of_breast_(skin)_(soft_tissue)
+        - melanoma_in_situ_of_ear_and_external_auricular_canal
+        - melanoma_in_situ_of_eyelid,_including_canthus
+        - melanoma_in_situ_of_left_ear_and_external_auricular_canal
+        - melanoma_in_situ_of_left_eyelid,_including_canthus
+        - melanoma_in_situ_of_left_lower_eyelid,_including_canthus
+        - melanoma_in_situ_of_left_lower_limb,_including_hip
+        - melanoma_in_situ_of_left_upper_eyelid,_including_canthus
+        - melanoma_in_situ_of_left_upper_limb,_including_shoulder
+        - melanoma_in_situ_of_lip
+        - melanoma_in_situ_of_lower_limb,_including_hip
+        - melanoma_in_situ_of_other_and_unspecified_parts_of_face
+        - melanoma_in_situ_of_other_part_of_trunk
+        - melanoma_in_situ_of_other_parts_of_face
+        - melanoma_in_situ_of_other_sites
+        - melanoma_in_situ_of_right_ear_and_external_auricular_canal
+        - melanoma_in_situ_of_right_eyelid,_including_canthus
+        - melanoma_in_situ_of_right_lower_eyelid,_including_canthus
+        - melanoma_in_situ_of_right_lower_limb,_including_hip
+        - melanoma_in_situ_of_right_upper_eyelid,_including_canthus
+        - melanoma_in_situ_of_right_upper_limb,_including_shoulder
+        - melanoma_in_situ_of_scalp_and_neck
+        - melanoma_in_situ_of_skin
+        - melanoma_in_situ_of_trunk
+        - melanoma_in_situ_of_unspecified_ear_and_external_auricular_canal
+        - melanoma_in_situ_of_unspecified_eyelid,_including_canthus
+        - melanoma_in_situ_of_unspecified_lower_limb,_including_hip
+        - melanoma_in_situ_of_unspecified_part_of_face
+        - melanoma_in_situ_of_unspecified_upper_limb,_including_shoulder
+        - melanoma_in_situ_of_upper_limb,_including_shoulder
+        - merkel_cell_carcinoma,_unspecified
+        - merkel_cell_carcinoma_of_anal_skin
+        - merkel_cell_carcinoma_of_left_ear_and_external_auricular_canal
+        - merkel_cell_carcinoma_of_left_lower_eyelid,_including_canthus
+        - merkel_cell_carcinoma_of_left_lower_limb,_including_hip
+        - merkel_cell_carcinoma_of_left_upper_eyelid,_including_canthus
+        - merkel_cell_carcinoma_of_left_upper_limb,_including_shoulder
+        - merkel_cell_carcinoma_of_lip
+        - merkel_cell_carcinoma_of_nose
+        - merkel_cell_carcinoma_of_other_part_of_trunk
+        - merkel_cell_carcinoma_of_other_parts_of_face
+        - merkel_cell_carcinoma_of_overlapping_sites
+        - merkel_cell_carcinoma_of_right_ear_and_external_auricular_canal
+        - merkel_cell_carcinoma_of_right_lower_eyelid,_including_canthus
+        - merkel_cell_carcinoma_of_right_lower_limb,_including_hip
+        - merkel_cell_carcinoma_of_right_upper_eyelid,_including_canthus
+        - merkel_cell_carcinoma_of_right_upper_limb,_including_shoulder
+        - merkel_cell_carcinoma_of_scalp_and_neck
+        - merkel_cell_carcinoma_of_skin_of_breast
+        - merkel_cell_carcinoma_of_unspecified_ear_and_external_auricular_canal
+        - merkel_cell_carcinoma_of_unspecified_eyelid,_including_canthus
+        - merkel_cell_carcinoma_of_unspecified_lower_limb,_including_hip
+        - merkel_cell_carcinoma_of_unspecified_part_of_face
+        - merkel_cell_carcinoma_of_unspecified_upper_limb,_including_shoulder
+        - mesothelioma,_unspecified
+        - mesothelioma_of_other_sites
+        - mesothelioma_of_pericardium
+        - mesothelioma_of_peritoneum
+        - mesothelioma_of_pleura
+        - mixed_cellularity_classical_hodgkin_lymphoma,_extranodal_and_solid_organ_sites
+        - mixed_cellularity_classical_hodgkin_lymphoma,_intra-abdominal_lymph_nodes
+        - mixed_cellularity_classical_hodgkin_lymphoma,_intrapelvic_lymph_nodes
+        - mixed_cellularity_classical_hodgkin_lymphoma,_intrathoracic_lymph_nodes
+        - mixed_cellularity_classical_hodgkin_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - mixed_cellularity_classical_hodgkin_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - mixed_cellularity_classical_hodgkin_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - mixed_cellularity_classical_hodgkin_lymphoma,_lymph_nodes_of_multiple_sites
+        - mixed_cellularity_classical_hodgkin_lymphoma,_spleen
+        - mixed_cellularity_classical_hodgkin_lymphoma,_unspecified_site
+        - monocytic_leukemia,_unspecified,_not_having_achieved_remission
+        - monocytic_leukemia,_unspecified_in_relapse
+        - monocytic_leukemia,_unspecified_in_remission
+        - multifocal_and_multisystemic_(disseminated)_langerhans-cell_histiocytosis
+        - multifocal_and_unisystemic_langerhans-cell_histiocytosis
+        - multiple_myeloma_in_relapse
+        - multiple_myeloma_in_remission
+        - multiple_myeloma_not_having_achieved_remission
+        - mycosis_fungoides,_extranodal_and_solid_organ_sites
+        - mycosis_fungoides,_intra-abdominal_lymph_nodes
+        - mycosis_fungoides,_intrapelvic_lymph_nodes
+        - mycosis_fungoides,_intrathoracic_lymph_nodes
+        - mycosis_fungoides,_lymph_nodes_of_axilla_and_upper_limb
+        - mycosis_fungoides,_lymph_nodes_of_head,_face,_and_neck
+        - mycosis_fungoides,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - mycosis_fungoides,_lymph_nodes_of_multiple_sites
+        - mycosis_fungoides,_spleen
+        - mycosis_fungoides,_unspecified_site
+        - myelodysplastic_disease,_not_classified
+        - myelodysplastic_syndrome,_unspecified
+        - myelodysplastic_syndrome_with_isolated_del_(5q)_chromosomal_abnormality
+        - myeloid_leukemia,_unspecified,_not_having_achieved_remission
+        - myeloid_leukemia,_unspecified_in_relapse
+        - myeloid_leukemia,_unspecified_in_remission
+        - myeloid_sarcoma,_in_relapse
+        - myeloid_sarcoma,_in_remission
+        - myeloid_sarcoma,_not_having_achieved_remission
+        - neoplasm_of_uncertain_behavior_of_brain,_infratentorial
+        - neoplasm_of_uncertain_behavior_of_brain,_supratentorial
+        - neoplasm_of_uncertain_behavior_of_brain,_unspecified
+        - neoplasm_of_uncertain_behavior_of_central_nervous_system,_unspecified
+        - neoplasm_of_uncertain_behavior_of_cerebral_meninges
+        - neoplasm_of_uncertain_behavior_of_cranial_nerves
+        - neoplasm_of_uncertain_behavior_of_craniopharyngeal_duct
+        - neoplasm_of_uncertain_behavior_of_lymphoid,_hematopoietic_and_related_tissue,_unspecified
+        - neoplasm_of_uncertain_behavior_of_meninges,_unspecified
+        - neoplasm_of_uncertain_behavior_of_other_specified_parts_of_central_nervous_system
+        - neoplasm_of_uncertain_behavior_of_pineal_gland
+        - neoplasm_of_uncertain_behavior_of_pituitary_gland
+        - neoplasm_of_uncertain_behavior_of_spinal_cord
+        - neoplasm_of_uncertain_behavior_of_spinal_meninges
+        - neoplasm_of_unspecified_behavior_of_brain
+        - neoplasm_of_unspecified_behavior_of_endocrine_glands_and_other_parts_of_nervous_system
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_extranodal_and_solid_organ_sites
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_intra-abdominal_lymph_nodes
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_intrapelvic_lymph_nodes
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_intrathoracic_lymph_nodes
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_lymph_nodes_of_multiple_sites
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_spleen
+        - nodular_lymphocyte_predominant_hodgkin_lymphoma,_unspecified_site
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_extranodal_and_solid_organ_sites
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_intra-abdominal_lymph_nodes
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_intrapelvic_lymph_nodes
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_intrathoracic_lymph_nodes
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_lymph_nodes_of_multiple_sites
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_spleen
+        - nodular_sclerosis_classical_hodgkin_lymphoma,_unspecified_site
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_extranodal_and_solid_organ_sites
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_intra-abdominal_lymph_nodes
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_intrapelvic_lymph_nodes
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_intrathoracic_lymph_nodes
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_lymph_nodes_of_axilla_and_upper_limb
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_lymph_nodes_of_head,_face,_and_neck
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_lymph_nodes_of_multiple_sites
+        - non-follicular_(diffuse)_lymphoma,_unspecified,_spleen
+        - non-hodgkin_lymphoma,_extranodal_and_solid_organ_sites
+        - non-hodgkin_lymphoma,_intra-abdominal_lymph_nodes
+        - non-hodgkin_lymphoma,_intrapelvic_lymph_nodes
+        - non-hodgkin_lymphoma,_intrathoracic_lymph_nodes
+        - non-hodgkin_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - non-hodgkin_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - non-hodgkin_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - non-hodgkin_lymphoma,_lymph_nodes_of_multiple_sites
+        - non-hodgkin_lymphoma,_spleen
+        - non-hodgkin_lymphoma,_unspecified_site
+        - osteomyelofibrosis
+        - other_classical_hodgkin_lymphoma,_extranodal_and_solid_organ_sites
+        - other_classical_hodgkin_lymphoma,_intra-abdominal_lymph_nodes
+        - other_classical_hodgkin_lymphoma,_intrapelvic_lymph_nodes
+        - other_classical_hodgkin_lymphoma,_intrathoracic_lymph_nodes
+        - other_classical_hodgkin_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - other_classical_hodgkin_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - other_classical_hodgkin_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - other_classical_hodgkin_lymphoma,_lymph_nodes_of_multiple_sites
+        - other_classical_hodgkin_lymphoma,_spleen
+        - other_classical_hodgkin_lymphoma,_unspecified_site
+        - other_hypereosinophilic_syndrome
+        - other_lymphoid_leukemia,_in_relapse
+        - other_lymphoid_leukemia,_in_remission
+        - other_lymphoid_leukemia_not_having_achieved_remission
+        - other_malignant_immunoproliferative_diseases
+        - other_malignant_mast_cell_neoplasm
+        - other_malignant_neuroendocrine_tumors
+        - other_mature_t/nk-cell_lymphomas,_extranodal_and_solid_organ_sites
+        - other_mature_t/nk-cell_lymphomas,_intra-abdominal_lymph_nodes
+        - other_mature_t/nk-cell_lymphomas,_intrapelvic_lymph_nodes
+        - other_mature_t/nk-cell_lymphomas,_intrathoracic_lymph_nodes
+        - other_mature_t/nk-cell_lymphomas,_lymph_nodes_of_axilla_and_upper_limb
+        - other_mature_t/nk-cell_lymphomas,_lymph_nodes_of_head,_face,_and_neck
+        - other_mature_t/nk-cell_lymphomas,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - other_mature_t/nk-cell_lymphomas,_lymph_nodes_of_multiple_sites
+        - other_mature_t/nk-cell_lymphomas,_spleen
+        - other_mature_t/nk-cell_lymphomas,_unspecified_site
+        - other_monocytic_leukemia,_in_relapse
+        - other_monocytic_leukemia,_in_remission
+        - other_monocytic_leukemia,_not_having_achieved_remission
+        - other_myelodysplastic_syndromes
+        - other_myeloid_leukemia,_in_relapse
+        - other_myeloid_leukemia,_in_remission
+        - other_myeloid_leukemia_not_having_achieved_remission
+        - other_non-follicular_lymphoma,_extranodal_and_solid_organ_sites
+        - other_non-follicular_lymphoma,_intra-abdominal_lymph_nodes
+        - other_non-follicular_lymphoma,_intrapelvic_lymph_nodes
+        - other_non-follicular_lymphoma,_intrathoracic_lymph_nodes
+        - other_non-follicular_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - other_non-follicular_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - other_non-follicular_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - other_non-follicular_lymphoma,_lymph_nodes_of_multiple_sites
+        - other_non-follicular_lymphoma,_spleen
+        - other_non-follicular_lymphoma,_unspecified_site
+        - other_sarcomas_of_liver
+        - other_secondary_neuroendocrine_tumors
+        - other_specified_carcinomas_of_liver
+        - other_specified_leukemias,_in_relapse
+        - other_specified_leukemias,_in_remission
+        - other_specified_leukemias_not_having_achieved_remission
+        - other_specified_malignant_neoplasm_of_skin,_unspecified
+        - other_specified_malignant_neoplasms_of_lymphoid,_hematopoietic_and_related_tissue
+        - other_specified_neoplasms_of_uncertain_behavior_of_lymphoid,_hematopoietic_and_related_tissue
+        - other_specified_type_of_carcinoma_in_situ_of_breast
+        - other_specified_type_of_carcinoma_in_situ_of_left_breast
+        - other_specified_type_of_carcinoma_in_situ_of_right_breast
+        - other_specified_type_of_carcinoma_in_situ_of_unspecified_breast
+        - other_specified_types_of_non-hodgkin_lymphoma,_extranodal_and_solid_organ_sites
+        - other_specified_types_of_non-hodgkin_lymphoma,_intra-abdominal_lymph_nodes
+        - other_specified_types_of_non-hodgkin_lymphoma,_intrapelvic_lymph_nodes
+        - other_specified_types_of_non-hodgkin_lymphoma,_intrathoracic_lymph_nodes
+        - other_specified_types_of_non-hodgkin_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - other_specified_types_of_non-hodgkin_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - other_specified_types_of_non-hodgkin_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - other_specified_types_of_non-hodgkin_lymphoma,_lymph_nodes_of_multiple_sites
+        - other_specified_types_of_non-hodgkin_lymphoma,_spleen
+        - other_specified_types_of_non-hodgkin_lymphoma,_unspecified_site
+        - other_types_of_follicular_lymphoma,_extranodal_and_solid_organ_sites
+        - other_types_of_follicular_lymphoma,_intra-abdominal_lymph_nodes
+        - other_types_of_follicular_lymphoma,_intrapelvic_lymph_nodes
+        - other_types_of_follicular_lymphoma,_intrathoracic_lymph_nodes
+        - other_types_of_follicular_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - other_types_of_follicular_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - other_types_of_follicular_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - other_types_of_follicular_lymphoma,_lymph_nodes_of_multiple_sites
+        - other_types_of_follicular_lymphoma,_spleen
+        - other_types_of_follicular_lymphoma,_unspecified_site
+        - peripheral_t-cell_lymphoma,_not_classified,_extranodal_and_solid_organ_sites
+        - peripheral_t-cell_lymphoma,_not_classified,_intra-abdominal_lymph_nodes
+        - peripheral_t-cell_lymphoma,_not_classified,_intrapelvic_lymph_nodes
+        - peripheral_t-cell_lymphoma,_not_classified,_intrathoracic_lymph_nodes
+        - peripheral_t-cell_lymphoma,_not_classified,_lymph_nodes_of_axilla_and_upper_limb
+        - peripheral_t-cell_lymphoma,_not_classified,_lymph_nodes_of_head,_face,_and_neck
+        - peripheral_t-cell_lymphoma,_not_classified,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - peripheral_t-cell_lymphoma,_not_classified,_lymph_nodes_of_multiple_sites
+        - peripheral_t-cell_lymphoma,_not_classified,_spleen
+        - peripheral_t-cell_lymphoma,_not_classified,_unspecified_site
+        - plasma_cell_leukemia_in_relapse
+        - plasma_cell_leukemia_in_remission
+        - plasma_cell_leukemia_not_having_achieved_remission
+        - polycythemmia_vera
+        - post-transplant_lymphoproliferative_disorder_(ptld)
+        - primary_cutaneous_cd30-positive_t-cell_proliferations
+        - prolymphocytic_leukemia_of_b-cell_type,_in_relapse
+        - prolymphocytic_leukemia_of_b-cell_type,_in_remission
+        - prolymphocytic_leukemia_of_b-cell_type_not_having_achieved_remission
+        - prolymphocytic_leukemia_of_t-cell_type,_in_relapse
+        - prolymphocytic_leukemia_of_t-cell_type,_in_remission
+        - prolymphocytic_leukemia_of_t-cell_type_not_having_achieved_remission
+        - refractory_anemia,_unspecified
+        - refractory_anemia_with_excess_of_blasts_1_||_refractory_anemia_with_excess_of_blasts,_unspecified
+        - refractory_anemia_with_excess_of_blasts_2
+        - refractory_anemia_with_ring_sideroblasts
+        - refractory_anemia_without_ring_sideroblasts,_so_stated
+        - refractory_cytopenia_with_multilineage_dysplasia_and_ring_sideroblasts
+        - sarcoma_of_dendritic_cells_(accessory_cells)
+        - sebaceous_cell_carcinoma_of_skin_of_left_lower_eyelid,_including_canthus
+        - sebaceous_cell_carcinoma_of_skin_of_left_upper_eyelid,_including_canthus
+        - sebaceous_cell_carcinoma_of_skin_of_right_lower_eyelid,_including_canthus
+        - sebaceous_cell_carcinoma_of_skin_of_right_upper_eyelid,_including_canthus
+        - sebaceous_cell_carcinoma_of_skin_of_unspecified_eyelid,_including_canthus
+        - secondary_and_unspecified_malignant_neoplasm_of_axilla_and_upper_limb_lymph_nodes
+        - secondary_and_unspecified_malignant_neoplasm_of_inguinal_and_lower_limb_lymph_nodes
+        - secondary_and_unspecified_malignant_neoplasm_of_intra-abdominal_lymph_nodes
+        - secondary_and_unspecified_malignant_neoplasm_of_intrapelvic_lymph_nodes
+        - secondary_and_unspecified_malignant_neoplasm_of_intrathoracic_lymph_nodes
+        - secondary_and_unspecified_malignant_neoplasm_of_lymph_node,_unspecified
+        - secondary_and_unspecified_malignant_neoplasm_of_lymph_nodes
+        - secondary_and_unspecified_malignant_neoplasm_of_lymph_nodes_of_head,_face_and_neck
+        - secondary_and_unspecified_malignant_neoplasm_of_lymph_nodes_of_multiple_regions
+        - secondary_carcinoid_tumors_of_bone
+        - secondary_carcinoid_tumors_of_distant_lymph_nodes
+        - secondary_carcinoid_tumors_of_liver
+        - secondary_carcinoid_tumors_of_other_sites
+        - secondary_carcinoid_tumors_of_peritoneum
+        - secondary_carcinoid_tumors_||_secondary_carcinoid_tumors,_unspecified_site
+        - secondary_malignant_neoplasm_of_adrenal_gland_||_secondary_malignant_neoplasm_of_unspecified_adrenal_gland
+        - secondary_malignant_neoplasm_of_bladder
+        - secondary_malignant_neoplasm_of_bladder_and_other_urinary_organs_||_secondary_malignant_neoplasm_of_unspecified_urinary_organs
+        - secondary_malignant_neoplasm_of_bone
+        - secondary_malignant_neoplasm_of_bone_and_bone_marrow
+        - secondary_malignant_neoplasm_of_bone_marrow
+        - secondary_malignant_neoplasm_of_brain
+        - secondary_malignant_neoplasm_of_brain_cerebral_meninges
+        - secondary_malignant_neoplasm_of_breast
+        - secondary_malignant_neoplasm_of_cerebral_meninges
+        - secondary_malignant_neoplasm_of_genital_organs
+        - secondary_malignant_neoplasm_of_kidney_and_renal_pelvis_||_secondary_malignant_neoplasm_of_unspecified_kidney_and_renal_pelvis
+        - secondary_malignant_neoplasm_of_large_intestine_and_rectum
+        - secondary_malignant_neoplasm_of_left_adrenal_gland
+        - secondary_malignant_neoplasm_of_left_kidney_and_renal_pelvis
+        - secondary_malignant_neoplasm_of_left_lung
+        - secondary_malignant_neoplasm_of_left_ovary
+        - secondary_malignant_neoplasm_of_liver_and_intrahepatic_bile_duct
+        - secondary_malignant_neoplasm_of_lung_||_secondary_malignant_neoplasm_of_unspecified_lung
+        - secondary_malignant_neoplasm_of_mediastinum
+        - secondary_malignant_neoplasm_of_other_and_unspecified_digestive_organs
+        - secondary_malignant_neoplasm_of_other_and_unspecified_of_nervous_system
+        - secondary_malignant_neoplasm_of_other_and_unspecified_respiratory_organs
+        - secondary_malignant_neoplasm_of_other_and_unspecified_sites
+        - secondary_malignant_neoplasm_of_other_digestive_organs
+        - secondary_malignant_neoplasm_of_other_parts_of_nervous_system
+        - secondary_malignant_neoplasm_of_other_respiratory_organs
+        - secondary_malignant_neoplasm_of_other_specified_sites_||_secondary_malignant_neoplasm_of_other_specified_sites
+        - secondary_malignant_neoplasm_of_other_urinary_organs
+        - secondary_malignant_neoplasm_of_ovary_||_secondary_malignant_neoplasm_of_unspecified_ovary
+        - secondary_malignant_neoplasm_of_pleura
+        - secondary_malignant_neoplasm_of_respiratory_and_digestive_organs
+        - secondary_malignant_neoplasm_of_retroperitoneum_and_peritoneum
+        - secondary_malignant_neoplasm_of_right_adrenal_gland
+        - secondary_malignant_neoplasm_of_right_kidney_and_renal_pelvis
+        - secondary_malignant_neoplasm_of_right_lung
+        - secondary_malignant_neoplasm_of_right_ovary
+        - secondary_malignant_neoplasm_of_skin
+        - secondary_malignant_neoplasm_of_small_intestine
+        - secondary_malignant_neoplasm_of_unspecified_digestive_organ
+        - secondary_malignant_neoplasm_of_unspecified_part_of_nervous_system
+        - secondary_malignant_neoplasm_of_unspecified_respiratory_organ
+        - secondary_malignant_neoplasm_of_unspecified_site
+        - secondary_merkel_cell_carcinoma
+        - secondary_neuroendocrine_tumors
+        - sezary_disease,_extranodal_and_solid_organ_sites
+        - sezary_disease,_intra-abdominal_lymph_nodes
+        - sezary_disease,_intrapelvic_lymph_nodes
+        - sezary_disease,_intrathoracic_lymph_nodes
+        - sezary_disease,_lymph_nodes_of_axilla_and_upper_limb
+        - sezary_disease,_lymph_nodes_of_head,_face,_and_neck
+        - sezary_disease,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - sezary_disease,_lymph_nodes_of_multiple_sites
+        - sezary_disease,_spleen
+        - sezary_disease,_unspecified_site
+        - small_cell_b-cell_lymphoma,_extranodal_and_solid_organ_sites
+        - small_cell_b-cell_lymphoma,_intra-abdominal_lymph_nodes
+        - small_cell_b-cell_lymphoma,_intrapelvic_lymph_nodes
+        - small_cell_b-cell_lymphoma,_intrathoracic_lymph_nodes
+        - small_cell_b-cell_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - small_cell_b-cell_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - small_cell_b-cell_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - small_cell_b-cell_lymphoma,_lymph_nodes_of_multiple_sites
+        - small_cell_b-cell_lymphoma,_spleen
+        - small_cell_b-cell_lymphoma,_unspecified_site
+        - solitary_plasmacytoma_in_relapse
+        - solitary_plasmacytoma_in_remission
+        - solitary_plasmacytoma_not_having_achieved_remission
+        - subcutaneous_panniculitis-like_t-cell_lymphoma
+        - systemic_mastocytosis
+        - unifocal_langerhans-cell_histiocytosis
+        - unspecified_b-cell_lymphoma,_extranodal_and_solid_organ_sites
+        - unspecified_b-cell_lymphoma,_intra-abdominal_lymph_nodes
+        - unspecified_b-cell_lymphoma,_intrapelvic_lymph_nodes
+        - unspecified_b-cell_lymphoma,_intrathoracic_lymph_nodes
+        - unspecified_b-cell_lymphoma,_lymph_nodes_of_axilla_and_upper_limb
+        - unspecified_b-cell_lymphoma,_lymph_nodes_of_head,_face,_and_neck
+        - unspecified_b-cell_lymphoma,_lymph_nodes_of_inguinal_region_and_lower_limb
+        - unspecified_b-cell_lymphoma,_lymph_nodes_of_multiple_sites
+        - unspecified_b-cell_lymphoma,_spleen
+        - unspecified_b-cell_lymphoma,_unspecified_site
+        - unspecified_malignant_neoplasm_of_skin,_unspecified
+        - unspecified_type_of_carcinoma_in_situ_of_left_breast
+        - unspecified_type_of_carcinoma_in_situ_of_right_breast
+        - waldenstrom_macroglobulinemia
+    reason_reference:
+        Desc: Condition or observation that supports why the medication was administered.
+        Type: TBD
+    recorded_date:
+        Desc: The recordedDate represents when this particular Condition record was
+            created in the system, which is often a system-generated date.
+        Type: datetime
+    related_condition:
+        Desc: Associates the tumor marker test with a condition, if one exists. Condition
+            can be given by a reference or a code. In the case of a screening test
+            such as prostate-specific antigen (PSA), there may be no existing condition
+            to reference.
+        Type: TBD
+    reported:
+        Desc: Indicates if this record was captured as a secondary 'reported' record
+            rather than as an original primary source-of-truth record.  It may also
+            indicate the source of the report.
+        Type: TBD
+    requester:
+        Desc: The individual, organization, or device that initiated the request and
+            has responsibility for its activation.
+        Req: true
+        Type: TBD
+    result:
+        Desc: '[Observations](http://hl7.org/fhir/R4/observation.html)  that are part
+            of this diagnostic report.'
+        Type: TBD
+    result_>_region-studied:
+        Desc: '[Observations](http://hl7.org/fhir/R4/observation.html)  that are part
+            of this diagnostic report.'
+        Type: TBD
+    result_>_variant:
+        Desc: '[Observations](http://hl7.org/fhir/R4/observation.html)  that are part
+            of this diagnostic report.'
+        Type: TBD
+    specimen:
+        Desc: The specimen that was used when this observation was made.
+        Type: TBD
+    stage:
+        Desc: Clinical stage or grade of a condition. May include formal severity
+            assessments.
+        Type: TBD
+    stage_>_assessment:
+        Desc: Reference to a formal record of the evidence on which the staging assessment
+            is based.
+        Type: TBD
+    status:
+        Desc: The status of the result value.
+        Type: TBD
+        Req: true
+    status_reason:
+        Desc: A code indicating why the administration was not performed.
+        Enum:
+        - completion_of_clinical_trial_(finding)
+        - death_(event)
+        - financial_problem_(finding)
+        - lost_to_follow-up_(finding)
+        - no_response_to_treatment_(situation)
+        - noncompliance_with_treatment_(finding)
+        - patient_has_moved_away_(finding)
+        - pregnancy_(finding)
+        - refusal_of_treatment_by_patient_(situation)
+        - treatment_not_available_(situation)
+        - treatment_not_tolerated_(situation)
+    subject:
+        Desc: Patient whose disease status is recorded.
+        Req: true
+        Type: TBD
+    telecom_>_system:
+        Desc: Telecommunications form for contact point - what communications system
+            is required to make use of the contact.
+        Type: TBD
+    telecom_>_use:
+        Desc: Identifies the purpose for the contact point.
+        Type: TBD
+    telecom_>_value:
+        Desc: The actual contact point details, in a form that is meaningful to the
+            designated communication system (i.e. phone number or email address).
+        Type: string
+    termination_reason:
+        Desc: 'A code explaining the unplanned or premature termination, or normal
+            completion, of a plan of treatment, course of medication, or research
+            study.
+
+            This extension is deprecated since it is redundant with the statusReason
+            field.'
+        Enum:
+        - completion_of_clinical_trial_(finding)
+        - death_(event)
+        - financial_problem_(finding)
+        - lost_to_follow-up_(finding)
+        - no_response_to_treatment_(situation)
+        - noncompliance_with_treatment_(finding)
+        - patient_has_moved_away_(finding)
+        - pregnancy_(finding)
+        - refusal_of_treatment_by_patient_(situation)
+        - treatment_not_available_(situation)
+        - treatment_not_tolerated_(situation)
+    timestamp:
+        Desc: The date/time that the bundle was assembled - i.e. when the resources
+            were placed in the bundle.
+        Type: TBD
+    treatment_intent:
+        Desc: The purpose of a treatment, medication, or procedure.
+        Enum:
+        - curative_-_procedure_intent
+        - diagnostic_intent
+        - forensic_intent
+        - guidance_intent
+        - palliative_-_procedure_intent
+        - preventive_-_intent
+        - screening_-_procedure_intent
+        - supportive_-_procedure_intent
+    type:
+        Desc: The kind of material that forms the specimen.
+        Enum:
+        - amniotic_fluid
+        - bile_fluid
+        - blood,_fetal
+        - blood_arterial
+        - blood_venous
+        - bone
+        - cerebral_spinal_fluid
+        - cervical_mucus
+        - cord_blood
+        - duodenal_fluid
+        - fluid,_abdomen
+        - fluid,_hydrocele
+        - fluid,_kidney
+        - fluid,_lumbar_sac
+        - fluid,_pericardial
+        - fluid,_synovial_(joint_fluid)
+        - genital_vaginal
+        - marrow
+        - pancreatic_fluid
+        - placenta
+        - pleural_fluid_(thoracentesis_fluid)
+        - saliva
+        - seminal_fluid
+        - serum,_convalescent
+        - skin
+        - sputum
+        - stool_=_fecal
+        - tissue
+        - tumor
+        - urine
+        - vitreous_fluid
+        - whole_blood
+        - wound
+    value:
+        Desc: The information determined as a result of making the observation, if
+            the information has a simple value.
+        Enum:
+        - distant_metastasis_present_(finding)
+        - in_full_remission_(qualifier_value)
+        - in_partial_remission_(qualifier_value)
+        - patient's_condition_improved_(finding)
+        - patient's_condition_stable_(finding)
+        - patient's_condition_worsened_(finding)
+        - patient_condition_undetermined_(finding)
+    verification_status:
+        Desc: The verification status to support the clinical status of the condition.
+        Type: TBD
