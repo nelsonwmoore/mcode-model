@@ -1,4 +1,5 @@
 Handle: mCODE
+Version: v3.0.0
 Nodes:
     cancer-related_medication_administration_profile:
         Desc: An episode of medication administration for a patient whose condition
